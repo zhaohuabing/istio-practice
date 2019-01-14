@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Consul调试信息 · Istio服务网格深度解析与项目实践</title>
+        <title>Consul调试信息 · Istio深度解析与项目实践</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -30,6 +30,10 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
                 
             
                 
@@ -266,7 +270,7 @@
 </code></pre>
 <p>&#x53C2;&#x8003;&#xFF1A; <a href="https://www.consul.io/api/catalog.html" target="_blank">https://www.consul.io/api/catalog.html</a> </p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaohuabing.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated:
-2019-01-12 09:50:06
+2019-01-12 14:24:59
 </span></footer>
                                 
                                 </section>
@@ -294,7 +298,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Consul调试信息","level":"1.2.4","depth":2,"next":{"title":"协议层调试信息","level":"1.2.5","depth":2,"path":"content/debug-istio/协议层调试信息.md","ref":"content/debug-istio/协议层调试信息.md","articles":[]},"previous":{"title":"Envoy调试信息","level":"1.2.3","depth":2,"path":"content/debug-istio/Envoy调试信息.md","ref":"content/debug-istio/Envoy调试信息.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","-search","-sharing","edit-link","page-toc-button","back-to-top-button","github-buttons@2.1.0","tbfed-pagefooter@^0.0.1","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaohuabing.com 2019","modify_label":"Updated:","modify_format":"YYYY-MM-DD HH:mm:ss"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"github-buttons":{"repo":"zhaohuabing/istio-practice","types":["star"],"size":"small"},"edit-link":{"label":"在线编辑","base":"https://github.com/zhaohuabing/istio-practice/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"赵化冰","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"home":"https://zhaohuabing.com"},"title":"Istio服务网格深度解析与项目实践","language":"zh-hans","links":{"sidebar":{"zhaohuabing.com":"https://zhaohuabing.com"}},"gitbook":">=3.2.0","description":"Istio服务网格深度解析与项目实践","extension":null},"file":{"path":"content/debug-istio/Consul调试信息.md","mtime":"2019-01-12T01:50:06.673Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-12T06:05:06.042Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Consul调试信息","level":"1.2.4","depth":2,"next":{"title":"协议层调试信息","level":"1.2.5","depth":2,"path":"content/debug-istio/协议层调试信息.md","ref":"content/debug-istio/协议层调试信息.md","articles":[]},"previous":{"title":"Envoy调试信息","level":"1.2.3","depth":2,"path":"content/debug-istio/Envoy调试信息.md","ref":"content/debug-istio/Envoy调试信息.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","-search","-sharing","edit-link","page-toc-button","back-to-top-button","github-buttons@2.1.0","tbfed-pagefooter@^0.0.1","disqus","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaohuabing.com 2019","modify_label":"Updated:","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"istio-practice"},"livereload":{},"splitter":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"page-toc-button":{},"back-to-top-button":{},"github-buttons":{"repo":"zhaohuabing/istio-practice","types":["star"],"size":"small"},"edit-link":{"label":"在线编辑","base":"https://github.com/zhaohuabing/istio-practice/edit/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"赵化冰","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"home":"https://zhaohuabing.com"},"title":"Istio深度解析与项目实践","language":"zh-hans","links":{"sidebar":{"zhaohuabing.com":"https://zhaohuabing.com"}},"gitbook":">=3.2.0","description":"Istio深度解析与项目实践","extension":null},"file":{"path":"content/debug-istio/Consul调试信息.md","mtime":"2019-01-12T06:24:59.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-14T04:40:19.677Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -321,6 +325,14 @@
     
         
         <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
         
     
         
