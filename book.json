@@ -1,6 +1,6 @@
 ﻿{
   "gitbook": ">=3.2.0",
-  "description": "Istio服务网格深度解析与项目实践",
+  "description": "Istio深度解析与项目实践",
   "language": "zh-hans",
   "author": "赵化冰",
   "extension": null,
@@ -20,7 +20,8 @@
     "page-toc-button",
     "back-to-top-button",
     "github-buttons@2.1.0",
-    "tbfed-pagefooter@^0.0.1"
+    "tbfed-pagefooter@^0.0.1",
+    "disqus"
   ],
   "pluginsConfig": {
     "edit-link": {
@@ -36,9 +37,12 @@
         "copyright": "Copyright © zhaohuabing.com 2019",
         "modify_label": "Updated:",
         "modify_format": "YYYY-MM-DD HH:mm:ss"
-    }
+    },
+   "disqus": {
+            "shortName": "istio-practice"
+        }
   },
-  "title": "Istio服务网格深度解析与项目实践",
+  "title": "Istio深度解析与项目实践",
   "variables": {
     "home": "https://zhaohuabing.com"
   }
