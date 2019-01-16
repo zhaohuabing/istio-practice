@@ -14,7 +14,7 @@ curl http://127.0.0.1:9093/debug/edsz
 
 Cluster信息
 ```bash
-curl http://127.0.0.1:9093/debug/edsz
+curl http://127.0.0.1:9093/debug/cdsz
 ```
 
 #### Pilot内部的配置信息
