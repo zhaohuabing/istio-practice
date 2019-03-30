@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>https://zhaohuabing.com/istio-practice/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/微服务架构的演进.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/Istio服务网格.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/Istio控制面.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/Istio数据面.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/应用场景-分布式调用跟踪.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/应用场景-度量收集.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/应用场景-灰度发布.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/应用场景-断路器.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/istio-introduction/应用场景-故障注入.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/debug-istio/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/debug-istio/服务网格中的请求转发流程.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/debug-istio/Pilot调试信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/debug-istio/Envoy调试信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/debug-istio/Consul调试信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://zhaohuabing.com/istio-practice/content/debug-istio/协议层调试信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>
