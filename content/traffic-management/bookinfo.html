@@ -45,7 +45,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -763,11 +763,11 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><h1 id="bookinfo-&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;&#x5206;&#x6790;">Bookinfo &#x793A;&#x4F8B;&#x7A0B;&#x5E8F;&#x5206;&#x6790;</h1>
+                                <h1 id="bookinfo-&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;&#x5206;&#x6790;">Bookinfo &#x793A;&#x4F8B;&#x7A0B;&#x5E8F;&#x5206;&#x6790;</h1>
 <p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x4EE5;Bookinfo&#x4E3A;&#x4F8B;&#x5BF9;Istio&#x4E2D;&#x7684;&#x6D41;&#x91CF;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;&#x673A;&#x5236;&#xFF0C;&#x4EE5;&#x53CA;&#x63A7;&#x5236;&#x9762;&#x548C;&#x6570;&#x636E;&#x9762;&#x7684;&#x4EA4;&#x4E92;&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x5206;&#x6790;&#x3002;</p>
 <h2 id="bookinfo&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;">Bookinfo&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;</h2>
 <p>&#x4E0B;&#x56FE;&#x663E;&#x793A;&#x4E86;Bookinfo&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;&#x4E2D;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x7AEF;&#x53E3;&#x548C;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#xFF0C;&#x4EE5;&#x7528;&#x4E8E;&#x540E;&#x7EED;&#x7684;&#x5206;&#x6790;&#x3002;</p>
-<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/bookinfo.png" data-lightbox="88362d8f-c7b1-4fd5-8be6-a40add5717ff" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/bookinfo.png" alt=""></a></p>
+<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/bookinfo.png" data-lightbox="f0876ed9-8740-4a9c-826e-c7d0922e60a1" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/bookinfo.png" alt=""></a></p>
 <h2 id="xds&#x63A5;&#x53E3;&#x8C03;&#x8BD5;&#x65B9;&#x6CD5;">xDS&#x63A5;&#x53E3;&#x8C03;&#x8BD5;&#x65B9;&#x6CD5;</h2>
 <p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5982;&#x4F55;&#x5BF9;xDS&#x63A5;&#x53E3;&#x7684;&#x76F8;&#x5173;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x67E5;&#x770B;&#x548C;&#x5206;&#x6790;&#x3002;Envoy v2&#x63A5;&#x53E3;&#x91C7;&#x7528;&#x4E86;gRPC&#xFF0C;&#x7531;&#x4E8E;gRPC&#x662F;&#x57FA;&#x4E8E;&#x4E8C;&#x8FDB;&#x5236;&#x7684;RPC&#x534F;&#x8BAE;&#xFF0C;&#x65E0;&#x6CD5;&#x50CF;V1&#x7684;REST&#x63A5;&#x53E3;&#x4E00;&#x6837;&#x901A;&#x8FC7;curl&#x548C;&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x884C;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;&#x4F46;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Pilot&#x548C;Envoy&#x7684;&#x8C03;&#x8BD5;&#x63A5;&#x53E3;&#x67E5;&#x770B;xDS&#x63A5;&#x53E3;&#x7684;&#x76F8;&#x5173;&#x6570;&#x636E;&#x3002;</p>
 <h3 id="pilot&#x8C03;&#x8BD5;&#x65B9;&#x6CD5;">Pilot&#x8C03;&#x8BD5;&#x65B9;&#x6CD5;</h3>
@@ -956,7 +956,7 @@ func WriteBootstrap(config *meshconfig.ProxyConfig, node string, epoch int, pilo
 </code></pre><p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x5C06;productpage pod&#x4E2D;&#x8BE5;&#x6587;&#x4EF6;&#x5BFC;&#x51FA;&#x6765;&#x67E5;&#x770B;&#x5176;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
 <pre class="language-"><code>kubectl exec productpage-v1-54b8b9f55-bx2dq -c istio-proxy -- cat /etc/istio/proxy/envoy-rev0.json &gt; envoy-rev0.json
 </code></pre><p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
-<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-rev0.png" data-lightbox="7ffc481b-3c82-4f51-8fec-2879f4667053" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-rev0.png" alt=""></a>  </p>
+<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-rev0.png" data-lightbox="40907344-e2b1-4631-a07f-d7bcdb01d56b" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-rev0.png" alt=""></a>  </p>
 <p>&#x5176;&#x4E2D;&#x5404;&#x4E2A;&#x914D;&#x7F6E;&#x8282;&#x70B9;&#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <h5 id="node">Node</h5>
 <p>&#x5305;&#x542B;&#x4E86;Envoy&#x6240;&#x5728;&#x8282;&#x70B9;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;</p>
@@ -1005,77 +1005,72 @@ func WriteBootstrap(config *meshconfig.ProxyConfig, node string, epoch int, pilo
       ]
     }
   }
-</code></pre><pre class="language-"><code>
-##### Static_resources
-
-&#x914D;&#x7F6E;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x5305;&#x62EC;&#x4E86;xds-grpc&#x548C;zipkin&#x4E24;&#x4E2A;cluster&#x3002;&#x5176;&#x4E2D;xds-grpc cluster&#x5BF9;&#x5E94;&#x524D;&#x9762;dynamic_resources&#x4E2D;ADS&#x914D;&#x7F6E;&#xFF0C;&#x6307;&#x660E;&#x4E86;Envoy&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x3002;
-</code></pre><p>&quot;static_resources&quot;: {
+</code></pre><h5 id="staticresources">Static_resources</h5>
+<p>&#x914D;&#x7F6E;&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x5305;&#x62EC;&#x4E86;xds-grpc&#x548C;zipkin&#x4E24;&#x4E2A;cluster&#x3002;&#x5176;&#x4E2D;xds-grpc cluster&#x5BF9;&#x5E94;&#x524D;&#x9762;dynamic_resources&#x4E2D;ADS&#x914D;&#x7F6E;&#xFF0C;&#x6307;&#x660E;&#x4E86;Envoy&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x3002;</p>
+<pre class="language-"><code>&quot;static_resources&quot;: {
     &quot;clusters&quot;: [
     {
     &quot;name&quot;: &quot;xds-grpc&quot;,
     &quot;type&quot;: &quot;STRICT_DNS&quot;,
     &quot;connect_timeout&quot;: {&quot;seconds&quot;: 10, &quot;nanos&quot;: 0},
-    &quot;lb_policy&quot;: &quot;ROUND_ROBIN&quot;,</p>
-<pre class="language-"><code>&quot;hosts&quot;: [
-{
-&quot;socket_address&quot;: {&quot;address&quot;: &quot;istio-pilot.istio-system&quot;, &quot;port_value&quot;: 15010}
-}
-],
-&quot;circuit_breakers&quot;: {
-    &quot;thresholds&quot;: [
-  {
-    &quot;priority&quot;: &quot;default&quot;,
-    &quot;max_connections&quot;: &quot;100000&quot;,
-    &quot;max_pending_requests&quot;: &quot;100000&quot;,
-    &quot;max_requests&quot;: &quot;100000&quot;
-  },
-  {
-    &quot;priority&quot;: &quot;high&quot;,
-    &quot;max_connections&quot;: &quot;100000&quot;,
-    &quot;max_pending_requests&quot;: &quot;100000&quot;,
-    &quot;max_requests&quot;: &quot;100000&quot;
-  }]
-},
-&quot;upstream_connection_options&quot;: {
-  &quot;tcp_keepalive&quot;: {
-    &quot;keepalive_time&quot;: 300
-  }
-},
-&quot;http2_protocol_options&quot;: { }
-} ,
-  {
-    &quot;name&quot;: &quot;zipkin&quot;,
-    &quot;type&quot;: &quot;STRICT_DNS&quot;,
-    &quot;connect_timeout&quot;: {
-      &quot;seconds&quot;: 1
-    },
     &quot;lb_policy&quot;: &quot;ROUND_ROBIN&quot;,
+
     &quot;hosts&quot;: [
+    {
+    &quot;socket_address&quot;: {&quot;address&quot;: &quot;istio-pilot.istio-system&quot;, &quot;port_value&quot;: 15010}
+    }
+    ],
+    &quot;circuit_breakers&quot;: {
+        &quot;thresholds&quot;: [
       {
-        &quot;socket_address&quot;: {&quot;address&quot;: &quot;zipkin.istio-system&quot;, &quot;port_value&quot;: 9411}
+        &quot;priority&quot;: &quot;default&quot;,
+        &quot;max_connections&quot;: &quot;100000&quot;,
+        &quot;max_pending_requests&quot;: &quot;100000&quot;,
+        &quot;max_requests&quot;: &quot;100000&quot;
+      },
+      {
+        &quot;priority&quot;: &quot;high&quot;,
+        &quot;max_connections&quot;: &quot;100000&quot;,
+        &quot;max_pending_requests&quot;: &quot;100000&quot;,
+        &quot;max_requests&quot;: &quot;100000&quot;
+      }]
+    },
+    &quot;upstream_connection_options&quot;: {
+      &quot;tcp_keepalive&quot;: {
+        &quot;keepalive_time&quot;: 300
       }
+    },
+    &quot;http2_protocol_options&quot;: { }
+    } ,
+      {
+        &quot;name&quot;: &quot;zipkin&quot;,
+        &quot;type&quot;: &quot;STRICT_DNS&quot;,
+        &quot;connect_timeout&quot;: {
+          &quot;seconds&quot;: 1
+        },
+        &quot;lb_policy&quot;: &quot;ROUND_ROBIN&quot;,
+        &quot;hosts&quot;: [
+          {
+            &quot;socket_address&quot;: {&quot;address&quot;: &quot;zipkin.istio-system&quot;, &quot;port_value&quot;: 9411}
+          }
+        ]
+      }
+
     ]
   }
-
-]
-</code></pre><p>  }</p>
-<pre class="language-"><code>
-##### Tracing
-
-&#x914D;&#x7F6E;&#x5206;&#x5E03;&#x5F0F;&#x94FE;&#x8DEF;&#x8DDF;&#x8E2A;&#x3002;
-</code></pre><p>&quot;tracing&quot;: {
+</code></pre><h5 id="tracing">Tracing</h5>
+<p>&#x914D;&#x7F6E;&#x5206;&#x5E03;&#x5F0F;&#x94FE;&#x8DEF;&#x8DDF;&#x8E2A;&#x3002;</p>
+<pre class="language-"><code>&quot;tracing&quot;: {
     &quot;http&quot;: {
       &quot;name&quot;: &quot;envoy.zipkin&quot;,
       &quot;config&quot;: {
         &quot;collector_cluster&quot;: &quot;zipkin&quot;
       }
     }
-  }</p>
-<pre class="language-"><code>
-##### Stats_sinks
-
-&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x7684;&#x662F;&#x548C;Envoy&#x76F4;&#x8FDE;&#x7684;metrics&#x6536;&#x96C6;sink,&#x548C;Mixer telemetry&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#x3002;Envoy&#x81EA;&#x5E26;stats&#x683C;&#x5F0F;&#x7684;metrics&#x4E0A;&#x62A5;&#x3002;
-</code></pre><p>&quot;stats_sinks&quot;: [
+  }
+</code></pre><h5 id="statssinks">Stats_sinks</h5>
+<p>&#x8FD9;&#x91CC;&#x914D;&#x7F6E;&#x7684;&#x662F;&#x548C;Envoy&#x76F4;&#x8FDE;&#x7684;metrics&#x6536;&#x96C6;sink,&#x548C;Mixer telemetry&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#x3002;Envoy&#x81EA;&#x5E26;stats&#x683C;&#x5F0F;&#x7684;metrics&#x4E0A;&#x62A5;&#x3002;</p>
+<pre class="language-"><code>&quot;stats_sinks&quot;: [
     {
       &quot;name&quot;: &quot;envoy.statsd&quot;,
       &quot;config&quot;: {
@@ -1084,57 +1079,38 @@ func WriteBootstrap(config *meshconfig.ProxyConfig, node string, epoch int, pilo
         }
       }
     }
-  ]</p>
-<pre class="language-"><code>&#x5728;Gist https://gist.github.com/zhaohuabing/14191bdcf72e37bf700129561c3b41ae&#x4E2D;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8BE5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x5185;&#x5BB9;&#x3002;
-
-## Envoy&#x914D;&#x7F6E;&#x5206;&#x6790;
-
-### &#x901A;&#x8FC7;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x914D;&#x7F6E;
-
-&#x4ECE;Envoy&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5927;&#x81F4;&#x770B;&#x5230;Istio&#x901A;&#x8FC7;Envoy&#x6765;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x548C;&#x6D41;&#x91CF;&#x7BA1;&#x7406;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;&#x3002;&#x5373;&#x63A7;&#x5236;&#x9762;&#x5C06;xDS server&#x4FE1;&#x606F;&#x901A;&#x8FC7;static resource&#x7684;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x5230;Envoy&#x7684;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;Envoy&#x542F;&#x52A8;&#x540E;&#x901A;&#x8FC7;xDS server&#x83B7;&#x53D6;&#x5230;dynamic resource&#xFF0C;&#x5305;&#x62EC;&#x7F51;&#x683C;&#x4E2D;&#x7684;service&#x4FE1;&#x606F;&#x53CA;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x3002;
-
-Envoy&#x914D;&#x7F6E;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;&#xFF1A;
-
-![](https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-init.png)  
-
-1. Pilot-agent&#x6839;&#x636E;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x548C;K8S API Server&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x751F;&#x6210;Envoy&#x7684;&#x521D;&#x59CB;&#x914D;&#x7F6E;&#x6587;&#x4EF6;envoy-rev0.json&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x544A;&#x8BC9;Envoy&#x4ECE;xDS server&#x4E2D;&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x914D;&#x7F6E;&#x4E86;xDS server&#x7684;&#x5730;&#x5740;&#x4FE1;&#x606F;&#xFF0C;&#x5373;&#x63A7;&#x5236;&#x9762;&#x7684;Pilot&#x3002;
-1. Pilot-agent&#x4F7F;&#x7528;envoy-rev0.json&#x542F;&#x52A8;Envoy&#x8FDB;&#x7A0B;&#x3002;
-1. Envoy&#x6839;&#x636E;&#x521D;&#x59CB;&#x914D;&#x7F6E;&#x83B7;&#x5F97;Pilot&#x5730;&#x5740;&#xFF0C;&#x91C7;&#x7528;xDS&#x63A5;&#x53E3;&#x4ECE;Pilot&#x83B7;&#x53D6;&#x5230;Listener&#xFF0C;Cluster&#xFF0C;Route&#x7B49;d&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;
-1. Envoy&#x6839;&#x636E;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x542F;&#x52A8;Listener&#xFF0C;&#x5E76;&#x6839;&#x636E;Listener&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x7ED3;&#x5408;Route&#x548C;Cluster&#x5BF9;&#x62E6;&#x622A;&#x5230;&#x7684;&#x6D41;&#x91CF;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;
-
-&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;Envoy&#x4E2D;&#x5B9E;&#x9645;&#x751F;&#x6548;&#x7684;&#x914D;&#x7F6E;&#x662F;&#x7531;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x9759;&#x6001;&#x914D;&#x7F6E;&#x548C;&#x4ECE;Pilot&#x83B7;&#x53D6;&#x7684;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x4E00;&#x8D77;&#x7EC4;&#x6210;&#x7684;&#x3002;&#x56E0;&#x6B64;&#x53EA;&#x5BF9;envoy-rev0
-.json&#x8FDB;&#x884C;&#x5206;&#x6790;&#x5E76;&#x4E0D;&#x80FD;&#x770B;&#x5230;Mesh&#x4E2D;&#x6D41;&#x91CF;&#x7BA1;&#x7406;&#x7684;&#x5168;&#x8C8C;&#x3002;&#x90A3;&#x4E48;&#x6709;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x53EF;&#x4EE5;&#x770B;&#x5230;Envoy&#x4E2D;&#x5B9E;&#x9645;&#x751F;&#x6548;&#x7684;&#x5B8C;&#x6574;&#x914D;&#x7F6E;&#x5462;&#xFF1F;&#x7B54;&#x6848;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Envoy&#x7684;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x6765;&#x83B7;&#x53D6;Envoy&#x7684;&#x5B8C;&#x6574;&#x914D;&#x7F6E;&#x3002;
-</code></pre><p>kubectl exec -it productpage-v1-54b8b9f55-bx2dq -c istio-proxy curl <a href="http://127.0.0.1:15000/config_dump" target="_blank">http://127.0.0.1:15000/config_dump</a> &gt; config_dump</p>
-<pre class="language-"><code>&#x8BE5;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x957F;&#x8FBE;&#x8FD1;7000&#x884C;&#xFF0C;&#x672C;&#x6587;&#x4E2D;&#x5C31;&#x4E0D;&#x8D34;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x5728;Gist https://gist.github.com/zhaohuabing/034ef87786d290a4e89cd6f5ad6fcc97 &#x4E2D;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x5168;&#x6587;&#x3002;
-
-### Envoy&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7ED3;&#x6784;
-
-![](https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config.png)  
-
-&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x8282;&#x70B9;&#x5305;&#x62EC;&#xFF1A;
-
-#### Bootstrap
-
-&#x4ECE;&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x5927;&#x81F4;&#x731C;&#x51FA;&#x8FD9;&#x662F;Envoy&#x7684;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#xFF0C;&#x6253;&#x5F00;&#x8BE5;&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x524D;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x4ECB;&#x7ECD;&#x7684;envoy-rev0.json&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;
-
-![](https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-bootstrap.png)  
-
-#### Clusters 
-
-&#x5728;Envoy&#x4E2D;&#xFF0C;Cluster&#x662F;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x96C6;&#x7FA4;&#xFF0C;Cluster&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5230;&#x591A;&#x4E2A;endpoint&#xFF0C;&#x6BCF;&#x4E2A;endpoint&#x90FD;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF0C;Envoy&#x6839;&#x636E;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;&#x5C06;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5230;&#x8FD9;&#x4E9B;endpoint&#x4E2D;&#x3002;
-
-&#x5728;Productpage&#x7684;clusters&#x914D;&#x7F6E;&#x4E2D;&#x5305;&#x542B;static_clusters&#x548C;dynamic_active_clusters&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4E2D;static_clusters&#x662F;&#x6765;&#x81EA;&#x4E8E;envoy-rev0.json&#x7684;xDS server&#x548C;zipkin server&#x4FE1;&#x606F;&#x3002;dynamic_active_clusters&#x662F;&#x901A;&#x8FC7;xDS&#x63A5;&#x53E3;&#x4ECE;Istio&#x63A7;&#x5236;&#x9762;&#x83B7;&#x53D6;&#x7684;&#x52A8;&#x6001;&#x670D;&#x52A1;&#x4FE1;&#x606F;&#x3002;
-
-![](https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-clusters.png)  
-
-Dynamic Cluster&#x4E2D;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x7C7B;Cluster&#xFF1A;
-
-##### Outbound Cluster
-
-&#x8FD9;&#x90E8;&#x5206;&#x7684;Cluster&#x5360;&#x4E86;&#x7EDD;&#x5927;&#x591A;&#x6570;&#xFF0C;&#x8BE5;&#x7C7B;Cluster&#x5BF9;&#x5E94;&#x4E8E;Envoy&#x6240;&#x5728;&#x8282;&#x70B9;&#x7684;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x3002;&#x4EE5;details&#x4E3A;&#x4F8B;&#xFF0C;&#x5BF9;&#x4E8E;Productpage&#x6765;&#x8BF4;,details&#x662F;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x670D;&#x52A1;&#xFF0C;&#x56E0;&#x6B64;&#x5176;Cluster&#x540D;&#x79F0;&#x4E2D;&#x5305;&#x542B;outbound&#x5B57;&#x6837;&#x3002;
-
-&#x4ECE;details &#x670D;&#x52A1;&#x5BF9;&#x5E94;&#x7684;cluster&#x914D;&#x7F6E;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5176;&#x7C7B;&#x578B;&#x4E3A;EDS&#xFF0C;&#x5373;&#x8868;&#x793A;&#x8BE5;Cluster&#x7684;endpoint&#x6765;&#x81EA;&#x4E8E;&#x52A8;&#x6001;&#x53D1;&#x73B0;&#xFF0C;&#x52A8;&#x6001;&#x53D1;&#x73B0;&#x4E2D;eds_config&#x5219;&#x6307;&#x5411;&#x4E86;ads&#xFF0C;&#x6700;&#x7EC8;&#x6307;&#x5411;static Resource&#x4E2D;&#x914D;&#x7F6E;&#x7684;xds-grpc cluster,&#x5373;Pilot&#x7684;&#x5730;&#x5740;&#x3002;
-</code></pre><p>{
+  ]
+</code></pre><p>&#x5728;Gist <a href="https://gist.github.com/zhaohuabing/14191bdcf72e37bf700129561c3b41ae&#x4E2D;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8BE5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x5185;&#x5BB9;&#x3002;" target="_blank">https://gist.github.com/zhaohuabing/14191bdcf72e37bf700129561c3b41ae&#x4E2D;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8BE5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x5185;&#x5BB9;&#x3002;</a></p>
+<h2 id="envoy&#x914D;&#x7F6E;&#x5206;&#x6790;">Envoy&#x914D;&#x7F6E;&#x5206;&#x6790;</h2>
+<h3 id="&#x901A;&#x8FC7;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x914D;&#x7F6E;">&#x901A;&#x8FC7;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x5B8C;&#x6574;&#x914D;&#x7F6E;</h3>
+<p>&#x4ECE;Envoy&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5927;&#x81F4;&#x770B;&#x5230;Istio&#x901A;&#x8FC7;Envoy&#x6765;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x548C;&#x6D41;&#x91CF;&#x7BA1;&#x7406;&#x7684;&#x57FA;&#x672C;&#x539F;&#x7406;&#x3002;&#x5373;&#x63A7;&#x5236;&#x9762;&#x5C06;xDS server&#x4FE1;&#x606F;&#x901A;&#x8FC7;static resource&#x7684;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x5230;Envoy&#x7684;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;Envoy&#x542F;&#x52A8;&#x540E;&#x901A;&#x8FC7;xDS server&#x83B7;&#x53D6;&#x5230;dynamic resource&#xFF0C;&#x5305;&#x62EC;&#x7F51;&#x683C;&#x4E2D;&#x7684;service&#x4FE1;&#x606F;&#x53CA;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x3002;</p>
+<p>Envoy&#x914D;&#x7F6E;&#x521D;&#x59CB;&#x5316;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-init.png" data-lightbox="b3b37a43-5cb5-4161-93a7-0b018699f39d" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-init.png" alt=""></a>  </p>
+<ol>
+<li>Pilot-agent&#x6839;&#x636E;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x548C;K8S API Server&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x751F;&#x6210;Envoy&#x7684;&#x521D;&#x59CB;&#x914D;&#x7F6E;&#x6587;&#x4EF6;envoy-rev0.json&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x544A;&#x8BC9;Envoy&#x4ECE;xDS server&#x4E2D;&#x83B7;&#x53D6;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x914D;&#x7F6E;&#x4E86;xDS server&#x7684;&#x5730;&#x5740;&#x4FE1;&#x606F;&#xFF0C;&#x5373;&#x63A7;&#x5236;&#x9762;&#x7684;Pilot&#x3002;</li>
+<li>Pilot-agent&#x4F7F;&#x7528;envoy-rev0.json&#x542F;&#x52A8;Envoy&#x8FDB;&#x7A0B;&#x3002;</li>
+<li>Envoy&#x6839;&#x636E;&#x521D;&#x59CB;&#x914D;&#x7F6E;&#x83B7;&#x5F97;Pilot&#x5730;&#x5740;&#xFF0C;&#x91C7;&#x7528;xDS&#x63A5;&#x53E3;&#x4ECE;Pilot&#x83B7;&#x53D6;&#x5230;Listener&#xFF0C;Cluster&#xFF0C;Route&#x7B49;d&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</li>
+<li>Envoy&#x6839;&#x636E;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x542F;&#x52A8;Listener&#xFF0C;&#x5E76;&#x6839;&#x636E;Listener&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x7ED3;&#x5408;Route&#x548C;Cluster&#x5BF9;&#x62E6;&#x622A;&#x5230;&#x7684;&#x6D41;&#x91CF;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</li>
+</ol>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;Envoy&#x4E2D;&#x5B9E;&#x9645;&#x751F;&#x6548;&#x7684;&#x914D;&#x7F6E;&#x662F;&#x7531;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x9759;&#x6001;&#x914D;&#x7F6E;&#x548C;&#x4ECE;Pilot&#x83B7;&#x53D6;&#x7684;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x4E00;&#x8D77;&#x7EC4;&#x6210;&#x7684;&#x3002;&#x56E0;&#x6B64;&#x53EA;&#x5BF9;envoy-rev0
+.json&#x8FDB;&#x884C;&#x5206;&#x6790;&#x5E76;&#x4E0D;&#x80FD;&#x770B;&#x5230;Mesh&#x4E2D;&#x6D41;&#x91CF;&#x7BA1;&#x7406;&#x7684;&#x5168;&#x8C8C;&#x3002;&#x90A3;&#x4E48;&#x6709;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x53EF;&#x4EE5;&#x770B;&#x5230;Envoy&#x4E2D;&#x5B9E;&#x9645;&#x751F;&#x6548;&#x7684;&#x5B8C;&#x6574;&#x914D;&#x7F6E;&#x5462;&#xFF1F;&#x7B54;&#x6848;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Envoy&#x7684;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x6765;&#x83B7;&#x53D6;Envoy&#x7684;&#x5B8C;&#x6574;&#x914D;&#x7F6E;&#x3002;</p>
+<pre class="language-"><code>kubectl exec -it productpage-v1-54b8b9f55-bx2dq -c istio-proxy curl http://127.0.0.1:15000/config_dump &gt; config_dump
+</code></pre><p>&#x8BE5;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x957F;&#x8FBE;&#x8FD1;7000&#x884C;&#xFF0C;&#x672C;&#x6587;&#x4E2D;&#x5C31;&#x4E0D;&#x8D34;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x5728;Gist <a href="https://gist.github.com/zhaohuabing/034ef87786d290a4e89cd6f5ad6fcc97" target="_blank">https://gist.github.com/zhaohuabing/034ef87786d290a4e89cd6f5ad6fcc97</a> &#x4E2D;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x5168;&#x6587;&#x3002;</p>
+<h3 id="envoy&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7ED3;&#x6784;">Envoy&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7ED3;&#x6784;</h3>
+<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config.png" data-lightbox="e24f8a0c-1503-4cb7-8fa1-d1e8101a5193" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config.png" alt=""></a>  </p>
+<p>&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x8282;&#x70B9;&#x5305;&#x62EC;&#xFF1A;</p>
+<h4 id="bootstrap">Bootstrap</h4>
+<p>&#x4ECE;&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x5927;&#x81F4;&#x731C;&#x51FA;&#x8FD9;&#x662F;Envoy&#x7684;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#xFF0C;&#x6253;&#x5F00;&#x8BE5;&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x524D;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x4ECB;&#x7ECD;&#x7684;envoy-rev0.json&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-bootstrap.png" data-lightbox="d760f81b-1143-4895-9339-d12333e9cb00" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-bootstrap.png" alt=""></a>  </p>
+<h4 id="clusters">Clusters</h4>
+<p>&#x5728;Envoy&#x4E2D;&#xFF0C;Cluster&#x662F;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x96C6;&#x7FA4;&#xFF0C;Cluster&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5230;&#x591A;&#x4E2A;endpoint&#xFF0C;&#x6BCF;&#x4E2A;endpoint&#x90FD;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF0C;Envoy&#x6839;&#x636E;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;&#x5C06;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x5230;&#x8FD9;&#x4E9B;endpoint&#x4E2D;&#x3002;</p>
+<p>&#x5728;Productpage&#x7684;clusters&#x914D;&#x7F6E;&#x4E2D;&#x5305;&#x542B;static_clusters&#x548C;dynamic_active_clusters&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4E2D;static_clusters&#x662F;&#x6765;&#x81EA;&#x4E8E;envoy-rev0.json&#x7684;xDS server&#x548C;zipkin server&#x4FE1;&#x606F;&#x3002;dynamic_active_clusters&#x662F;&#x901A;&#x8FC7;xDS&#x63A5;&#x53E3;&#x4ECE;Istio&#x63A7;&#x5236;&#x9762;&#x83B7;&#x53D6;&#x7684;&#x52A8;&#x6001;&#x670D;&#x52A1;&#x4FE1;&#x606F;&#x3002;</p>
+<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-clusters.png" data-lightbox="f00e1ad0-ed14-49df-9bd7-deb59868bedc" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-config-clusters.png" alt=""></a>  </p>
+<p>Dynamic Cluster&#x4E2D;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x7C7B;Cluster&#xFF1A;</p>
+<h5 id="outbound-cluster">Outbound Cluster</h5>
+<p>&#x8FD9;&#x90E8;&#x5206;&#x7684;Cluster&#x5360;&#x4E86;&#x7EDD;&#x5927;&#x591A;&#x6570;&#xFF0C;&#x8BE5;&#x7C7B;Cluster&#x5BF9;&#x5E94;&#x4E8E;Envoy&#x6240;&#x5728;&#x8282;&#x70B9;&#x7684;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x3002;&#x4EE5;details&#x4E3A;&#x4F8B;&#xFF0C;&#x5BF9;&#x4E8E;Productpage&#x6765;&#x8BF4;,details&#x662F;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x670D;&#x52A1;&#xFF0C;&#x56E0;&#x6B64;&#x5176;Cluster&#x540D;&#x79F0;&#x4E2D;&#x5305;&#x542B;outbound&#x5B57;&#x6837;&#x3002;</p>
+<p>&#x4ECE;details &#x670D;&#x52A1;&#x5BF9;&#x5E94;&#x7684;cluster&#x914D;&#x7F6E;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5176;&#x7C7B;&#x578B;&#x4E3A;EDS&#xFF0C;&#x5373;&#x8868;&#x793A;&#x8BE5;Cluster&#x7684;endpoint&#x6765;&#x81EA;&#x4E8E;&#x52A8;&#x6001;&#x53D1;&#x73B0;&#xFF0C;&#x52A8;&#x6001;&#x53D1;&#x73B0;&#x4E2D;eds_config&#x5219;&#x6307;&#x5411;&#x4E86;ads&#xFF0C;&#x6700;&#x7EC8;&#x6307;&#x5411;static Resource&#x4E2D;&#x914D;&#x7F6E;&#x7684;xds-grpc cluster,&#x5373;Pilot&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<pre class="language-"><code>{
  &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
  &quot;cluster&quot;: {
   &quot;name&quot;: &quot;outbound|9080||details.default.svc.cluster.local&quot;,
@@ -1153,47 +1129,43 @@ Dynamic Cluster&#x4E2D;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x7C7B;Cluster&#xFF1A;
   }
  },
  &quot;last_updated&quot;: &quot;2018-09-06T09:34:20.404Z&quot;
-}</p>
-<pre class="language-"><code>
-&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Pilot&#x7684;&#x8C03;&#x8BD5;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x8BE5;Cluster&#x7684;endpoint&#xFF1A;
-</code></pre><p>curl <a href="http://10.96.8.103:9093/debug/edsz" target="_blank">http://10.96.8.103:9093/debug/edsz</a> &gt; pilot_eds_dump</p>
-<pre class="language-"><code>
-&#x5BFC;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x957F;&#x8FBE;1300&#x591A;&#x884C;&#xFF0C;&#x672C;&#x6587;&#x53EA;&#x8D34;&#x51FA;details&#x670D;&#x52A1;&#x76F8;&#x5173;&#x7684;endpoint&#x914D;&#x7F6E;&#xFF0C;&#x5B8C;&#x6574;&#x6587;&#x4EF6;&#x53C2;&#x89C1;:https://gist.github.com/zhaohuabing/a161d2f64746acd18097b74e6a5af551
-
-&#x4ECE;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;details cluster&#x914D;&#x7F6E;&#x4E86;1&#x4E2A;endpoint&#x5730;&#x5740;&#xFF0C;&#x662F;details&#x7684;pod ip&#x3002;
-</code></pre><p>{
+}
+</code></pre><p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Pilot&#x7684;&#x8C03;&#x8BD5;&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x8BE5;Cluster&#x7684;endpoint&#xFF1A;</p>
+<pre class="language-"><code>curl http://10.96.8.103:9093/debug/edsz &gt; pilot_eds_dump
+</code></pre><p>&#x5BFC;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x957F;&#x8FBE;1300&#x591A;&#x884C;&#xFF0C;&#x672C;&#x6587;&#x53EA;&#x8D34;&#x51FA;details&#x670D;&#x52A1;&#x76F8;&#x5173;&#x7684;endpoint&#x914D;&#x7F6E;&#xFF0C;&#x5B8C;&#x6574;&#x6587;&#x4EF6;&#x53C2;&#x89C1;:<a href="https://gist.github.com/zhaohuabing/a161d2f64746acd18097b74e6a5af551" target="_blank">https://gist.github.com/zhaohuabing/a161d2f64746acd18097b74e6a5af551</a></p>
+<p>&#x4ECE;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;details cluster&#x914D;&#x7F6E;&#x4E86;1&#x4E2A;endpoint&#x5730;&#x5740;&#xFF0C;&#x662F;details&#x7684;pod ip&#x3002;</p>
+<pre class="language-"><code>{
   &quot;clusterName&quot;: &quot;outbound|9080||details.default.svc.cluster.local&quot;,
   &quot;endpoints&quot;: [
     {
-      &quot;locality&quot;: {</p>
-<pre class="language-"><code>  },
-  &quot;lbEndpoints&quot;: [
-    {
-      &quot;endpoint&quot;: {
-        &quot;address&quot;: {
-          &quot;socketAddress&quot;: {
-            &quot;address&quot;: &quot;192.168.206.21&quot;,
-            &quot;portValue&quot;: 9080
+      &quot;locality&quot;: {
+
+      },
+      &quot;lbEndpoints&quot;: [
+        {
+          &quot;endpoint&quot;: {
+            &quot;address&quot;: {
+              &quot;socketAddress&quot;: {
+                &quot;address&quot;: &quot;192.168.206.21&quot;,
+                &quot;portValue&quot;: 9080
+              }
+            }
+          },
+          &quot;metadata&quot;: {
+            &quot;filterMetadata&quot;: {
+              &quot;istio&quot;: {
+                  &quot;uid&quot;: &quot;kubernetes://details-v1-6764bbc7f7-qwzdg.default&quot;
+                }
+            }
           }
         }
-      },
-      &quot;metadata&quot;: {
-        &quot;filterMetadata&quot;: {
-          &quot;istio&quot;: {
-              &quot;uid&quot;: &quot;kubernetes://details-v1-6764bbc7f7-qwzdg.default&quot;
-            }
-        }
-      }
+      ]
     }
   ]
 }
-</code></pre><p>  ]
-}</p>
-<pre class="language-"><code>
-##### Inbound Cluster
-
-&#x8BE5;&#x7C7B;Cluster&#x5BF9;&#x5E94;&#x4E8E;Envoy&#x6240;&#x5728;&#x8282;&#x70B9;&#x4E0A;&#x7684;&#x670D;&#x52A1;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x670D;&#x52A1;&#x63A5;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#xFF0C;&#x5F53;&#x7136;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5165;&#x7AD9;&#x8BF7;&#x6C42;&#x3002;&#x5BF9;&#x4E8E;Productpage Pod&#x4E0A;&#x7684;Envoy&#xFF0C;&#x5176;&#x5BF9;&#x5E94;&#x7684;Inbound Cluster&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x5373;productpage&#x3002;&#x8BE5;cluster&#x5BF9;&#x5E94;&#x7684;host&#x4E3A;127.0.0.1,&#x5373;&#x73AF;&#x56DE;&#x5730;&#x5740;&#x4E0A;productpage&#x7684;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x3002;&#x7531;&#x4E8E;iptable&#x89C4;&#x5219;&#x4E2D;&#x6392;&#x9664;&#x4E86;127.0.0.1,&#x5165;&#x7AD9;&#x8BF7;&#x6C42;&#x901A;&#x8FC7;&#x8BE5;Inbound cluster&#x5904;&#x7406;&#x540E;&#x5C06;&#x8DF3;&#x8FC7;Envoy&#xFF0C;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;Productpage&#x8FDB;&#x7A0B;&#x5904;&#x7406;&#x3002;
-</code></pre><p>{
+</code></pre><h5 id="inbound-cluster">Inbound Cluster</h5>
+<p>&#x8BE5;&#x7C7B;Cluster&#x5BF9;&#x5E94;&#x4E8E;Envoy&#x6240;&#x5728;&#x8282;&#x70B9;&#x4E0A;&#x7684;&#x670D;&#x52A1;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x670D;&#x52A1;&#x63A5;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#xFF0C;&#x5F53;&#x7136;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5165;&#x7AD9;&#x8BF7;&#x6C42;&#x3002;&#x5BF9;&#x4E8E;Productpage Pod&#x4E0A;&#x7684;Envoy&#xFF0C;&#x5176;&#x5BF9;&#x5E94;&#x7684;Inbound Cluster&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x5373;productpage&#x3002;&#x8BE5;cluster&#x5BF9;&#x5E94;&#x7684;host&#x4E3A;127.0.0.1,&#x5373;&#x73AF;&#x56DE;&#x5730;&#x5740;&#x4E0A;productpage&#x7684;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x3002;&#x7531;&#x4E8E;iptable&#x89C4;&#x5219;&#x4E2D;&#x6392;&#x9664;&#x4E86;127.0.0.1,&#x5165;&#x7AD9;&#x8BF7;&#x6C42;&#x901A;&#x8FC7;&#x8BE5;Inbound cluster&#x5904;&#x7406;&#x540E;&#x5C06;&#x8DF3;&#x8FC7;Envoy&#xFF0C;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x7ED9;Productpage&#x8FDB;&#x7A0B;&#x5904;&#x7406;&#x3002;</p>
+<pre class="language-"><code>{
    &quot;version_info&quot;: &quot;2018-09-14T01:44:05Z&quot;,
    &quot;cluster&quot;: {
     &quot;name&quot;: &quot;inbound|9080||productpage.default.svc.cluster.local&quot;,
@@ -1213,175 +1185,156 @@ Dynamic Cluster&#x4E2D;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x7C7B;Cluster&#xFF1A;
     }
    },
    &quot;last_updated&quot;: &quot;2018-09-14T01:44:05.291Z&quot;
-}</p>
-<pre class="language-"><code>
-##### BlackHoleCluster
-
-&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;Cluster&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x540E;&#x7AEF;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;Host&#x3002;&#x5982;&#x5176;&#x540D;&#x5B57;&#x6240;&#x6697;&#x793A;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x8BF7;&#x6C42;&#x8FDB;&#x5165;&#x540E;&#x5C06;&#x88AB;&#x76F4;&#x63A5;&#x4E22;&#x5F03;&#x6389;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x5176;&#x5BF9;&#x7684;&#x76EE;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x5219;&#x88AB;&#x53D1;&#x5230;cluste&#x3002;
-</code></pre><p>{
+}
+</code></pre><h5 id="blackholecluster">BlackHoleCluster</h5>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;Cluster&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x540E;&#x7AEF;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;Host&#x3002;&#x5982;&#x5176;&#x540D;&#x5B57;&#x6240;&#x6697;&#x793A;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x8BF7;&#x6C42;&#x8FDB;&#x5165;&#x540E;&#x5C06;&#x88AB;&#x76F4;&#x63A5;&#x4E22;&#x5F03;&#x6389;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x5176;&#x5BF9;&#x7684;&#x76EE;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x5219;&#x88AB;&#x53D1;&#x5230;cluste&#x3002;</p>
+<pre class="language-"><code>{
    &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
    &quot;cluster&quot;: {
     &quot;name&quot;: &quot;BlackHoleCluster&quot;,
     &quot;connect_timeout&quot;: &quot;5s&quot;
    },
    &quot;last_updated&quot;: &quot;2018-09-06T09:34:20.408Z&quot;
-}</p>
-<pre class="language-"><code>
-#### Listeners
-
-Envoy&#x91C7;&#x7528;listener&#x6765;&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;downstream&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;listener&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x662F;&#x63D2;&#x4EF6;&#x5F0F;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x7684;filter&#x6765;&#x63D2;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x3002;Istio&#x5C31;&#x5728;Envoy&#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x7528;&#x4E8E;policy check&#x548C;metric report&#x7684;Mixer filter&#x3002;
-
-Listener&#x53EF;&#x4EE5;&#x7ED1;&#x5B9A;&#x5230;IP Socket&#x6216;&#x8005;Unix Domain Socket&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x7AEF;&#x53E3;&#x4E0A;&#xFF0C;&#x800C;&#x662F;&#x63A5;&#x6536;&#x4ECE;&#x5176;&#x4ED6;listener&#x8F6C;&#x53D1;&#x6765;&#x7684;&#x6570;&#x636E;&#x3002;Istio&#x5C31;&#x662F;&#x5229;&#x7528;&#x4E86;Envoy listener&#x7684;&#x8FD9;&#x4E00;&#x7279;&#x70B9;&#x5B9E;&#x73B0;&#x4E86;&#x5C06;&#x6765;&#x53D1;&#x5411;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x8F6C;&#x4EA4;&#x7ED9;&#x4E0D;&#x540C;&#x7684;listener&#x5904;&#x7406;&#x3002;
-
-
-##### Virtual Listener 
-
-Envoy&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5728;15001&#x7AEF;&#x53E3;&#x76D1;&#x542C;&#x7684;&#x5165;&#x53E3;&#x76D1;&#x542C;&#x5668;&#x3002;Iptable&#x5C06;&#x8BF7;&#x6C42;&#x622A;&#x53D6;&#x540E;&#x53D1;&#x5411;15001&#x7AEF;&#x53E3;&#xFF0C;&#x8BE5;&#x76D1;&#x542C;&#x5668;&#x63A5;&#x6536;&#x540E;&#x5E76;&#x4E0D;&#x8FDB;&#x884C;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x5206;&#x53D1;&#x7ED9;&#x5176;&#x4ED6;&#x76D1;&#x542C;&#x5668;&#x5904;&#x7406;&#x3002;&#x8BE5;&#x76D1;&#x542C;&#x5668;&#x53D6;&#x540D;&#x4E3A;&quot;virtual&quot;&#xFF08;&#x865A;&#x62DF;&#xFF09;&#x76D1;&#x542C;&#x5668;&#x4E5F;&#x662F;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#x3002;
-
-Envoy&#x662F;&#x5982;&#x4F55;&#x505A;&#x5230;&#x6309;&#x670D;&#x52A1;&#x5206;&#x53D1;&#x7684;&#x5462;&#xFF1F; &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;Listener&#x7684;&#x914D;&#x7F6E;&#x9879;use_original_dest&#x8BBE;&#x7F6E;&#x4E3A;true,&#x8BE5;&#x914D;&#x7F6E;&#x8981;&#x6C42;&#x76D1;&#x542C;&#x5668;&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#x8F6C;&#x4EA4;&#x7ED9;&#x548C;&#x8BF7;&#x6C42;&#x539F;&#x76EE;&#x7684;&#x5730;&#x5740;&#x5173;&#x8054;&#x7684;listener&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002; 
-
-&#x4ECE;&#x5176;filter&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x548C;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x914D;&#x7F6E;&#x7684;listener&#x8FDB;&#x884C;&#x8F6C;&#x4EA4;&#xFF0C;&#x5219;&#x8BF7;&#x6C42;&#x5C06;&#x88AB;&#x53D1;&#x9001;&#x5230;[BlackHoleCluster](#blackholecluster),&#x7531;&#x4E8E;BlackHoleCluster&#x5E76;&#x6CA1;&#x6709;&#x914D;&#x7F6E;host&#xFF0C;&#x56E0;&#x6B64;&#x627E;&#x4E0D;&#x5230;&#x5BF9;&#x5E94;&#x76EE;&#x7684;&#x5730;&#x5BF9;&#x5E94;&#x76D1;&#x542C;&#x5668;&#x7684;&#x8BF7;&#x6C42;&#x5B9E;&#x9645;&#x4E0A;&#x4F1A;&#x88AB;&#x4E22;&#x5F03;&#x3002;
-</code></pre><pre class="language-"><code>{
- &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
- &quot;listener&quot;: {
-  &quot;name&quot;: &quot;virtual&quot;,
-  &quot;address&quot;: {
-   &quot;socket_address&quot;: {
-    &quot;address&quot;: &quot;0.0.0.0&quot;,
-    &quot;port_value&quot;: 15001
-   }
-  },
-  &quot;filter_chains&quot;: [
-   {
-    &quot;filters&quot;: [
-     {
-      &quot;name&quot;: &quot;envoy.tcp_proxy&quot;,
-      &quot;config&quot;: {
-       &quot;stat_prefix&quot;: &quot;BlackHoleCluster&quot;,
-       &quot;cluster&quot;: &quot;BlackHoleCluster&quot;
-      }
-     }
-    ]
-   }
-  ],
-  &quot;use_original_dst&quot;: true
- },
- &quot;last_updated&quot;: &quot;2018-09-06T09:34:26.262Z&quot;
 }
-</code></pre><pre class="language-"><code>
-##### Inbound Listener
-
-&#x5728;Productpage Pod&#x4E0A;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;Listener 192.168.206.23_9080&#xFF0C;&#x5F53;&#x5916;&#x90E8;&#x8C03;&#x7528;Productpage&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x5230;&#x8FBE;Pod&#x4E0A;15001&#x7684;&quot;Virtual&quot; Listener&#x65F6;&#xFF0C;Virtual Listener&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x5339;&#x914D;&#x5230;&#x8BE5;Listener,&#x8BF7;&#x6C42;&#x5C06;&#x88AB;&#x8F6C;&#x53D1;&#x8FC7;&#x6765;&#x3002;
-</code></pre><pre class="language-"><code>{
- &quot;version_info&quot;: &quot;2018-09-14T01:44:05Z&quot;,
- &quot;listener&quot;: {
-  &quot;name&quot;: &quot;192.168.206.23_9080&quot;,
-  &quot;address&quot;: {
-   &quot;socket_address&quot;: {
-    &quot;address&quot;: &quot;192.168.206.23&quot;,
-    &quot;port_value&quot;: 9080
-   }
-  },
-  &quot;filter_chains&quot;: [
-   {
-    &quot;filters&quot;: [
-     {
-      &quot;name&quot;: &quot;mixer&quot;,
-      &quot;config&quot;: {
-       &quot;transport&quot;: {
-        &quot;check_cluster&quot;: &quot;outbound|9091||istio-policy.istio-system.svc.cluster.local&quot;,
-        &quot;network_fail_policy&quot;: {
-         &quot;policy&quot;: &quot;FAIL_CLOSE&quot;
-        },
-        &quot;report_cluster&quot;: &quot;outbound|9091||istio-telemetry.istio-system.svc.cluster.local&quot;,
-        &quot;attributes_for_mixer_proxy&quot;: {
-         &quot;attributes&quot;: {
-          &quot;source.uid&quot;: {
-           &quot;string_value&quot;: &quot;kubernetes://productpage-v1-54b8b9f55-bx2dq.default&quot;
+</code></pre><h4 id="listeners">Listeners</h4>
+<p>Envoy&#x91C7;&#x7528;listener&#x6765;&#x63A5;&#x6536;&#x5E76;&#x5904;&#x7406;downstream&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;listener&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x662F;&#x63D2;&#x4EF6;&#x5F0F;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x7684;filter&#x6765;&#x63D2;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x3002;Istio&#x5C31;&#x5728;Envoy&#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x7528;&#x4E8E;policy check&#x548C;metric report&#x7684;Mixer filter&#x3002;</p>
+<p>Listener&#x53EF;&#x4EE5;&#x7ED1;&#x5B9A;&#x5230;IP Socket&#x6216;&#x8005;Unix Domain Socket&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x7AEF;&#x53E3;&#x4E0A;&#xFF0C;&#x800C;&#x662F;&#x63A5;&#x6536;&#x4ECE;&#x5176;&#x4ED6;listener&#x8F6C;&#x53D1;&#x6765;&#x7684;&#x6570;&#x636E;&#x3002;Istio&#x5C31;&#x662F;&#x5229;&#x7528;&#x4E86;Envoy listener&#x7684;&#x8FD9;&#x4E00;&#x7279;&#x70B9;&#x5B9E;&#x73B0;&#x4E86;&#x5C06;&#x6765;&#x53D1;&#x5411;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x8F6C;&#x4EA4;&#x7ED9;&#x4E0D;&#x540C;&#x7684;listener&#x5904;&#x7406;&#x3002;</p>
+<h5 id="virtual-listener">Virtual Listener</h5>
+<p>Envoy&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5728;15001&#x7AEF;&#x53E3;&#x76D1;&#x542C;&#x7684;&#x5165;&#x53E3;&#x76D1;&#x542C;&#x5668;&#x3002;Iptable&#x5C06;&#x8BF7;&#x6C42;&#x622A;&#x53D6;&#x540E;&#x53D1;&#x5411;15001&#x7AEF;&#x53E3;&#xFF0C;&#x8BE5;&#x76D1;&#x542C;&#x5668;&#x63A5;&#x6536;&#x540E;&#x5E76;&#x4E0D;&#x8FDB;&#x884C;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x5206;&#x53D1;&#x7ED9;&#x5176;&#x4ED6;&#x76D1;&#x542C;&#x5668;&#x5904;&#x7406;&#x3002;&#x8BE5;&#x76D1;&#x542C;&#x5668;&#x53D6;&#x540D;&#x4E3A;&quot;virtual&quot;&#xFF08;&#x865A;&#x62DF;&#xFF09;&#x76D1;&#x542C;&#x5668;&#x4E5F;&#x662F;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#x3002;</p>
+<p>Envoy&#x662F;&#x5982;&#x4F55;&#x505A;&#x5230;&#x6309;&#x670D;&#x52A1;&#x5206;&#x53D1;&#x7684;&#x5462;&#xFF1F; &#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;Listener&#x7684;&#x914D;&#x7F6E;&#x9879;use_original_dest&#x8BBE;&#x7F6E;&#x4E3A;true,&#x8BE5;&#x914D;&#x7F6E;&#x8981;&#x6C42;&#x76D1;&#x542C;&#x5668;&#x5C06;&#x63A5;&#x6536;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#x8F6C;&#x4EA4;&#x7ED9;&#x548C;&#x8BF7;&#x6C42;&#x539F;&#x76EE;&#x7684;&#x5730;&#x5740;&#x5173;&#x8054;&#x7684;listener&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002; </p>
+<p>&#x4ECE;&#x5176;filter&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x548C;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x914D;&#x7F6E;&#x7684;listener&#x8FDB;&#x884C;&#x8F6C;&#x4EA4;&#xFF0C;&#x5219;&#x8BF7;&#x6C42;&#x5C06;&#x88AB;&#x53D1;&#x9001;&#x5230;<a href="#blackholecluster">BlackHoleCluster</a>,&#x7531;&#x4E8E;BlackHoleCluster&#x5E76;&#x6CA1;&#x6709;&#x914D;&#x7F6E;host&#xFF0C;&#x56E0;&#x6B64;&#x627E;&#x4E0D;&#x5230;&#x5BF9;&#x5E94;&#x76EE;&#x7684;&#x5730;&#x5BF9;&#x5E94;&#x76D1;&#x542C;&#x5668;&#x7684;&#x8BF7;&#x6C42;&#x5B9E;&#x9645;&#x4E0A;&#x4F1A;&#x88AB;&#x4E22;&#x5F03;&#x3002;</p>
+<pre class="language-"><code>    {
+     &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
+     &quot;listener&quot;: {
+      &quot;name&quot;: &quot;virtual&quot;,
+      &quot;address&quot;: {
+       &quot;socket_address&quot;: {
+        &quot;address&quot;: &quot;0.0.0.0&quot;,
+        &quot;port_value&quot;: 15001
+       }
+      },
+      &quot;filter_chains&quot;: [
+       {
+        &quot;filters&quot;: [
+         {
+          &quot;name&quot;: &quot;envoy.tcp_proxy&quot;,
+          &quot;config&quot;: {
+           &quot;stat_prefix&quot;: &quot;BlackHoleCluster&quot;,
+           &quot;cluster&quot;: &quot;BlackHoleCluster&quot;
           }
          }
-        }
-       },
-       &quot;mixer_attributes&quot;: {
-        &quot;attributes&quot;: {
-         &quot;destination.port&quot;: {
-          &quot;int64_value&quot;: &quot;9080&quot;
-         },
-         &quot;context.reporter.uid&quot;: {
-          &quot;string_value&quot;: &quot;kubernetes://productpage-v1-54b8b9f55-bx2dq.default&quot;
-         },
-         &quot;destination.namespace&quot;: {
-          &quot;string_value&quot;: &quot;default&quot;
-         },
-         &quot;destination.ip&quot;: {
-          &quot;bytes_value&quot;: &quot;AAAAAAAAAAAAAP//wKjOFw==&quot;
-         },
-         &quot;destination.uid&quot;: {
-          &quot;string_value&quot;: &quot;kubernetes://productpage-v1-54b8b9f55-bx2dq.default&quot;
-         },
-         &quot;context.reporter.kind&quot;: {
-          &quot;string_value&quot;: &quot;inbound&quot;
-         }
-        }
+        ]
        }
+      ],
+      &quot;use_original_dst&quot;: true
+     },
+     &quot;last_updated&quot;: &quot;2018-09-06T09:34:26.262Z&quot;
+    }
+</code></pre><h5 id="inbound-listener">Inbound Listener</h5>
+<p>&#x5728;Productpage Pod&#x4E0A;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;Listener 192.168.206.23_9080&#xFF0C;&#x5F53;&#x5916;&#x90E8;&#x8C03;&#x7528;Productpage&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x5230;&#x8FBE;Pod&#x4E0A;15001&#x7684;&quot;Virtual&quot; Listener&#x65F6;&#xFF0C;Virtual Listener&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x5339;&#x914D;&#x5230;&#x8BE5;Listener,&#x8BF7;&#x6C42;&#x5C06;&#x88AB;&#x8F6C;&#x53D1;&#x8FC7;&#x6765;&#x3002;</p>
+<pre class="language-"><code>    {
+     &quot;version_info&quot;: &quot;2018-09-14T01:44:05Z&quot;,
+     &quot;listener&quot;: {
+      &quot;name&quot;: &quot;192.168.206.23_9080&quot;,
+      &quot;address&quot;: {
+       &quot;socket_address&quot;: {
+        &quot;address&quot;: &quot;192.168.206.23&quot;,
+        &quot;port_value&quot;: 9080
+       }
+      },
+      &quot;filter_chains&quot;: [
+       {
+        &quot;filters&quot;: [
+         {
+          &quot;name&quot;: &quot;mixer&quot;,
+          &quot;config&quot;: {
+           &quot;transport&quot;: {
+            &quot;check_cluster&quot;: &quot;outbound|9091||istio-policy.istio-system.svc.cluster.local&quot;,
+            &quot;network_fail_policy&quot;: {
+             &quot;policy&quot;: &quot;FAIL_CLOSE&quot;
+            },
+            &quot;report_cluster&quot;: &quot;outbound|9091||istio-telemetry.istio-system.svc.cluster.local&quot;,
+            &quot;attributes_for_mixer_proxy&quot;: {
+             &quot;attributes&quot;: {
+              &quot;source.uid&quot;: {
+               &quot;string_value&quot;: &quot;kubernetes://productpage-v1-54b8b9f55-bx2dq.default&quot;
+              }
+             }
+            }
+           },
+           &quot;mixer_attributes&quot;: {
+            &quot;attributes&quot;: {
+             &quot;destination.port&quot;: {
+              &quot;int64_value&quot;: &quot;9080&quot;
+             },
+             &quot;context.reporter.uid&quot;: {
+              &quot;string_value&quot;: &quot;kubernetes://productpage-v1-54b8b9f55-bx2dq.default&quot;
+             },
+             &quot;destination.namespace&quot;: {
+              &quot;string_value&quot;: &quot;default&quot;
+             },
+             &quot;destination.ip&quot;: {
+              &quot;bytes_value&quot;: &quot;AAAAAAAAAAAAAP//wKjOFw==&quot;
+             },
+             &quot;destination.uid&quot;: {
+              &quot;string_value&quot;: &quot;kubernetes://productpage-v1-54b8b9f55-bx2dq.default&quot;
+             },
+             &quot;context.reporter.kind&quot;: {
+              &quot;string_value&quot;: &quot;inbound&quot;
+             }
+            }
+           }
+          }
+         },
+         {
+          &quot;name&quot;: &quot;envoy.tcp_proxy&quot;,
+          &quot;config&quot;: {
+           &quot;stat_prefix&quot;: &quot;inbound|9080||productpage.default.svc.cluster.local&quot;,
+           &quot;cluster&quot;: &quot;inbound|9080||productpage.default.svc.cluster.local&quot;
+          }
+         }
+        ]
+       }
+      ],
+      &quot;deprecated_v1&quot;: {
+       &quot;bind_to_port&quot;: false
       }
      },
-     {
-      &quot;name&quot;: &quot;envoy.tcp_proxy&quot;,
-      &quot;config&quot;: {
-       &quot;stat_prefix&quot;: &quot;inbound|9080||productpage.default.svc.cluster.local&quot;,
-       &quot;cluster&quot;: &quot;inbound|9080||productpage.default.svc.cluster.local&quot;
-      }
-     }
-    ]
-   }
-  ],
-  &quot;deprecated_v1&quot;: {
-   &quot;bind_to_port&quot;: false
-  }
- },
- &quot;last_updated&quot;: &quot;2018-09-14T01:44:05.754Z&quot;
-}
-</code></pre><pre class="language-"><code>
-&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x914D;&#x7F6E;&quot;bind_to_port&quot;: false&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x8BE5;listener&#x521B;&#x5EFA;&#x540E;&#x5E76;&#x4E0D;&#x4F1A;&#x88AB;&#x7ED1;&#x5B9A;&#x5230;tcp&#x7AEF;&#x53E3;&#x4E0A;&#x76F4;&#x63A5;&#x63A5;&#x6536;&#x7F51;&#x7EDC;&#x4E0A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x5176;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x90FD;&#x8F6C;&#x53D1;&#x81EA;15001&#x7AEF;&#x53E3;&#x3002;
-
-&#x8BE5;listener&#x914D;&#x7F6E;&#x7684;envoy.tcp_proxy filter&#x5BF9;&#x5E94;&#x7684;cluster&#x4E3A;[&quot;inbound|9080||productpage.default.svc.cluster.local&quot;](#inbound-cluster),&#x8BE5;cluster&#x914D;&#x7F6E;&#x7684;host&#x4E3A;127.0.0.1:9080&#xFF0C;&#x56E0;&#x6B64;Envoy&#x4F1A;&#x5C06;&#x8BE5;&#x8BF7;&#x6C42;&#x53D1;&#x5411;127.0.0.1:9080&#x3002;&#x7531;&#x4E8E;iptable&#x8BBE;&#x7F6E;&#x4E2D;127.0.0.1&#x4E0D;&#x4F1A;&#x88AB;&#x62E6;&#x622A;,&#x8BE5;&#x8BF7;&#x6C42;&#x5C06;&#x53D1;&#x9001;&#x5230;Productpage&#x8FDB;&#x7A0B;&#x7684;9080&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#x3002;
-
-&#x9664;&#x6B64;&#x4EE5;&#x5916;&#xFF0C;Listenter&#x4E2D;&#x8FD8;&#x5305;&#x542B;Mixer filter&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x914D;&#x7F6E;&#x4E86;&#x7B56;&#x7565;&#x68C0;&#x67E5;(Mixer check)&#x548C;Metrics&#x4E0A;&#x62A5;(Mixer report)&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x53CA;Mixer&#x4E0A;&#x62A5;&#x7684;&#x4E00;&#x4E9B;attribute&#x53D6;&#x503C;&#x3002;
-
-##### Outbound Listener
-
-Envoy&#x4E3A;&#x7F51;&#x683C;&#x4E2D;&#x7684;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x6309;&#x7AEF;&#x53E3;&#x521B;&#x5EFA;&#x591A;&#x4E2A;Listener&#xFF0C;&#x4EE5;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x51FA;&#x5411;&#x8BF7;&#x6C42;&#x3002;
-
-Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outbound Listener
-
-* 0.0.0.0_9080 :&#x5904;&#x7406;&#x5BF9;details,reviews&#x548C;rating&#x670D;&#x52A1;&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;
-* 0.0.0.0_9411 :&#x5904;&#x7406;&#x5BF9;zipkin&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;
-* 0.0.0.0_15031 :&#x5904;&#x7406;&#x5BF9;ingressgateway&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;
-* 0.0.0.0_3000 :&#x5904;&#x7406;&#x5BF9;grafana&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;
-* 0.0.0.0_9093 :&#x5904;&#x7406;&#x5BF9;citadel&#x3001;galley&#x3001;pilot&#x3001;(Mixer)policy&#x3001;(Mixer)telemetry&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;
-* 0.0.0.0_15004 :&#x5904;&#x7406;&#x5BF9;(Mixer)policy&#x3001;(Mixer)telemetry&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;
-* ......
-
-&#x9664;&#x4E86;9080&#x8FD9;&#x4E2A;Listener&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5E94;&#x7528;&#x7684;&#x4E1A;&#x52A1;&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x4ED6;listener&#x90FD;&#x662F;Istio&#x7528;&#x4E8E;&#x5904;&#x7406;&#x81EA;&#x8EAB;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x6709;&#x7684;&#x63A7;&#x5236;&#x9762;&#x7EC4;&#x4EF6;&#x5982;Pilot&#xFF0C;Mixer&#x5BF9;&#x5E94;&#x591A;&#x4E2A;listener&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x8BE5;&#x7EC4;&#x4EF6;&#x6709;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;
-
-&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x5206;&#x6790;&#x4E00;&#x4E0B;9080&#x8FD9;&#x4E2A;&#x4E1A;&#x52A1;&#x7AEF;&#x53E3;&#x7684;Listenrer&#x3002;&#x548C;Outbound Listener&#x4E00;&#x6837;&#xFF0C;&#x8BE5;Listener&#x540C;&#x6837;&#x914D;&#x7F6E;&#x4E86;&quot;bind_to_port&quot;: false&#x5C5E;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x8BE5;listener&#x4E5F;&#x6CA1;&#x6709;&#x88AB;&#x7ED1;&#x5B9A;&#x5230;tcp&#x7AEF;&#x53E3;&#x4E0A;&#xFF0C;&#x5176;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x90FD;&#x8F6C;&#x53D1;&#x81EA;15001&#x7AEF;&#x53E3;&#x7684;Virtual listener&#x3002;
-
-&#x76D1;&#x542C;&#x5668;name&#x4E3A;0.0.0.0_9080,&#x63A8;&#x6D4B;&#x5176;&#x542B;&#x4E49;&#x5E94;&#x4E3A;&#x5339;&#x914D;&#x53D1;&#x5411;&#x4EFB;&#x610F;IP&#x7684;9080&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4ECE;[bookinfo&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;](#bookinfo&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;)&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;productpage,revirews,ratings,details&#x56DB;&#x4E2A;service&#x90FD;&#x662F;9080&#x7AEF;&#x53E3;&#xFF0C;&#x90A3;&#x4E48;Envoy&#x5982;&#x4F55;&#x533A;&#x522B;&#x5904;&#x7406;&#x8FD9;&#x56DB;&#x4E2A;service&#x5462;&#xFF1F;
-
-&#x9996;&#x5148;&#x9700;&#x8981;&#x533A;&#x5206;&#x5165;&#x5411;&#xFF08;&#x53D1;&#x9001;&#x7ED9;productpage&#xFF09;&#x8BF7;&#x6C42;&#x548C;&#x51FA;&#x5411;&#xFF08;&#x53D1;&#x9001;&#x7ED9;&#x5176;&#x4ED6;&#x51E0;&#x4E2A;&#x670D;&#x52A1;&#xFF09;&#x8BF7;&#x6C42;&#xFF1A;
-
-* &#x53D1;&#x7ED9;productpage&#x7684;&#x5165;&#x5411;&#x8BF7;&#x6C42;&#xFF0C;virtual listener&#x6839;&#x636E;&#x5176;&#x76EE;&#x7684;IP&#x548C;Port&#x9996;&#x5148;&#x5339;&#x914D;&#x5230;[192.168.206.23_9080](#inbound-listener)&#x8FD9;&#x4E2A;listener&#x4E0A;&#xFF0C;&#x4E0D;&#x4F1A;&#x8FDB;&#x5165;0.0.0.0_9080 listener&#x5904;&#x7406;&#x3002;
-* &#x4ECE;productpage&#x5916;&#x53D1;&#x7ED9;reviews&#x3001;details&#x548C;ratings&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;&#xFF0C;virtual listener&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x548C;&#x5176;&#x76EE;&#x7684;IP&#x5B8C;&#x5168;&#x5339;&#x914D;&#x7684;listener&#xFF0C;&#x56E0;&#x6B64;&#x6839;&#x636E;&#x901A;&#x914D;&#x539F;&#x5219;&#x8F6C;&#x4EA4;&#x7ED9;0.0.0.0_9080&#x5904;&#x7406;&#x3002;
-
-&gt; &#x5907;&#x6CE8;&#xFF1A;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
- 1. &#x8BE5;&#x8F6C;&#x53D1;&#x903B;&#x8F91;&#x4E3A;&#x6839;&#x636E;Envoy&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x7684;&#x63A8;&#x6D4B;&#xFF0C;&#x5E76;&#x672A;&#x5206;&#x6790;Envoy&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;&#x6B22;&#x8FCE;&#x4E86;&#x89E3;Envoy&#x4EE3;&#x7801;&#x548C;&#x5B9E;&#x73B0;&#x673A;&#x5236;&#x7684;&#x670B;&#x53CB;&#x6307;&#x6B63;&#x3002;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
- 2.&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;productpage&#x5E76;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;ratings&#x670D;&#x52A1;&#xFF0C;&#x4F46;Istio&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5404;&#x4E2A;&#x4E1A;&#x52A1;&#x4E4B;&#x95F4;&#x4F1A;&#x5982;&#x4F55;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x5C06;&#x6240;&#x6709;&#x7684;&#x670D;&#x52A1;&#x4FE1;&#x606F;&#x90FD;&#x4E0B;&#x53D1;&#x5230;&#x4E86;Envoy&#x4E2D;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x5BF9;&#x6548;&#x7387;&#x548C;&#x6027;&#x80FD;&#x7406;&#x8BBA;&#x4E0A;&#x6709;&#x4E00;&#x5B9A;&#x5F71;&#x54CD;&#xFF0C;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x4F18;&#x5316;&#x7A7A;&#x95F4;&#x3002;
-
-&#x7531;&#x4E8E;&#x5BF9;&#x5E94;&#x5230;reviews&#x3001;details&#x548C;Ratings&#x4E09;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x5F53;0.0.0.0_9080&#x63A5;&#x6536;&#x5230;&#x51FA;&#x5411;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x5230;&#x4E00;&#x4E2A;downstream cluster&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x9700;&#x8981;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x7531;&#x3002;
-
-&#x5728;&#x8BE5;listener&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5E76;&#x6CA1;&#x6709;&#x50CF;inbound listener&#x90A3;&#x6837;&#x901A;&#x8FC7;envoy.tcp_proxy&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;downstream&#x7684;cluster&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;rds&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;[&#x8DEF;&#x7531;&#x89C4;&#x5219;9080](#routes)&#xFF0C;&#x5728;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x4E2D;&#x518D;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x5BF9;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;
-</code></pre><p>{
+     &quot;last_updated&quot;: &quot;2018-09-14T01:44:05.754Z&quot;
+    }
+</code></pre><p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x914D;&#x7F6E;&quot;bind_to_port&quot;: false&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x8BE5;listener&#x521B;&#x5EFA;&#x540E;&#x5E76;&#x4E0D;&#x4F1A;&#x88AB;&#x7ED1;&#x5B9A;&#x5230;tcp&#x7AEF;&#x53E3;&#x4E0A;&#x76F4;&#x63A5;&#x63A5;&#x6536;&#x7F51;&#x7EDC;&#x4E0A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x5176;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x90FD;&#x8F6C;&#x53D1;&#x81EA;15001&#x7AEF;&#x53E3;&#x3002;</p>
+<p>&#x8BE5;listener&#x914D;&#x7F6E;&#x7684;envoy.tcp_proxy filter&#x5BF9;&#x5E94;&#x7684;cluster&#x4E3A;<a href="#inbound-cluster">&quot;inbound|9080||productpage.default.svc.cluster.local&quot;</a>,&#x8BE5;cluster&#x914D;&#x7F6E;&#x7684;host&#x4E3A;127.0.0.1:9080&#xFF0C;&#x56E0;&#x6B64;Envoy&#x4F1A;&#x5C06;&#x8BE5;&#x8BF7;&#x6C42;&#x53D1;&#x5411;127.0.0.1:9080&#x3002;&#x7531;&#x4E8E;iptable&#x8BBE;&#x7F6E;&#x4E2D;127.0.0.1&#x4E0D;&#x4F1A;&#x88AB;&#x62E6;&#x622A;,&#x8BE5;&#x8BF7;&#x6C42;&#x5C06;&#x53D1;&#x9001;&#x5230;Productpage&#x8FDB;&#x7A0B;&#x7684;9080&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4EE5;&#x5916;&#xFF0C;Listenter&#x4E2D;&#x8FD8;&#x5305;&#x542B;Mixer filter&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x914D;&#x7F6E;&#x4E86;&#x7B56;&#x7565;&#x68C0;&#x67E5;(Mixer check)&#x548C;Metrics&#x4E0A;&#x62A5;(Mixer report)&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x53CA;Mixer&#x4E0A;&#x62A5;&#x7684;&#x4E00;&#x4E9B;attribute&#x53D6;&#x503C;&#x3002;</p>
+<h5 id="outbound-listener">Outbound Listener</h5>
+<p>Envoy&#x4E3A;&#x7F51;&#x683C;&#x4E2D;&#x7684;&#x5916;&#x90E8;&#x670D;&#x52A1;&#x6309;&#x7AEF;&#x53E3;&#x521B;&#x5EFA;&#x591A;&#x4E2A;Listener&#xFF0C;&#x4EE5;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x51FA;&#x5411;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outbound Listener</p>
+<ul>
+<li>0.0.0.0_9080 :&#x5904;&#x7406;&#x5BF9;details,reviews&#x548C;rating&#x670D;&#x52A1;&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;</li>
+<li>0.0.0.0_9411 :&#x5904;&#x7406;&#x5BF9;zipkin&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;</li>
+<li>0.0.0.0_15031 :&#x5904;&#x7406;&#x5BF9;ingressgateway&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;</li>
+<li>0.0.0.0_3000 :&#x5904;&#x7406;&#x5BF9;grafana&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;</li>
+<li>0.0.0.0_9093 :&#x5904;&#x7406;&#x5BF9;citadel&#x3001;galley&#x3001;pilot&#x3001;(Mixer)policy&#x3001;(Mixer)telemetry&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;</li>
+<li>0.0.0.0_15004 :&#x5904;&#x7406;&#x5BF9;(Mixer)policy&#x3001;(Mixer)telemetry&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;</li>
+<li>......</li>
+</ul>
+<p>&#x9664;&#x4E86;9080&#x8FD9;&#x4E2A;Listener&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5E94;&#x7528;&#x7684;&#x4E1A;&#x52A1;&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x4ED6;listener&#x90FD;&#x662F;Istio&#x7528;&#x4E8E;&#x5904;&#x7406;&#x81EA;&#x8EAB;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x6709;&#x7684;&#x63A7;&#x5236;&#x9762;&#x7EC4;&#x4EF6;&#x5982;Pilot&#xFF0C;Mixer&#x5BF9;&#x5E94;&#x591A;&#x4E2A;listener&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x8BE5;&#x7EC4;&#x4EF6;&#x6709;&#x591A;&#x4E2A;&#x7AEF;&#x53E3;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x5206;&#x6790;&#x4E00;&#x4E0B;9080&#x8FD9;&#x4E2A;&#x4E1A;&#x52A1;&#x7AEF;&#x53E3;&#x7684;Listenrer&#x3002;&#x548C;Outbound Listener&#x4E00;&#x6837;&#xFF0C;&#x8BE5;Listener&#x540C;&#x6837;&#x914D;&#x7F6E;&#x4E86;&quot;bind_to_port&quot;: false&#x5C5E;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x8BE5;listener&#x4E5F;&#x6CA1;&#x6709;&#x88AB;&#x7ED1;&#x5B9A;&#x5230;tcp&#x7AEF;&#x53E3;&#x4E0A;&#xFF0C;&#x5176;&#x63A5;&#x6536;&#x5230;&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x90FD;&#x8F6C;&#x53D1;&#x81EA;15001&#x7AEF;&#x53E3;&#x7684;Virtual listener&#x3002;</p>
+<p>&#x76D1;&#x542C;&#x5668;name&#x4E3A;0.0.0.0_9080,&#x63A8;&#x6D4B;&#x5176;&#x542B;&#x4E49;&#x5E94;&#x4E3A;&#x5339;&#x914D;&#x53D1;&#x5411;&#x4EFB;&#x610F;IP&#x7684;9080&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4ECE;<a href="#bookinfo&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;">bookinfo&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;</a>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;productpage,revirews,ratings,details&#x56DB;&#x4E2A;service&#x90FD;&#x662F;9080&#x7AEF;&#x53E3;&#xFF0C;&#x90A3;&#x4E48;Envoy&#x5982;&#x4F55;&#x533A;&#x522B;&#x5904;&#x7406;&#x8FD9;&#x56DB;&#x4E2A;service&#x5462;&#xFF1F;</p>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x533A;&#x5206;&#x5165;&#x5411;&#xFF08;&#x53D1;&#x9001;&#x7ED9;productpage&#xFF09;&#x8BF7;&#x6C42;&#x548C;&#x51FA;&#x5411;&#xFF08;&#x53D1;&#x9001;&#x7ED9;&#x5176;&#x4ED6;&#x51E0;&#x4E2A;&#x670D;&#x52A1;&#xFF09;&#x8BF7;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x53D1;&#x7ED9;productpage&#x7684;&#x5165;&#x5411;&#x8BF7;&#x6C42;&#xFF0C;virtual listener&#x6839;&#x636E;&#x5176;&#x76EE;&#x7684;IP&#x548C;Port&#x9996;&#x5148;&#x5339;&#x914D;&#x5230;<a href="#inbound-listener">192.168.206.23_9080</a>&#x8FD9;&#x4E2A;listener&#x4E0A;&#xFF0C;&#x4E0D;&#x4F1A;&#x8FDB;&#x5165;0.0.0.0_9080 listener&#x5904;&#x7406;&#x3002;</li>
+<li>&#x4ECE;productpage&#x5916;&#x53D1;&#x7ED9;reviews&#x3001;details&#x548C;ratings&#x7684;&#x51FA;&#x5411;&#x8BF7;&#x6C42;&#xFF0C;virtual listener&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x548C;&#x5176;&#x76EE;&#x7684;IP&#x5B8C;&#x5168;&#x5339;&#x914D;&#x7684;listener&#xFF0C;&#x56E0;&#x6B64;&#x6839;&#x636E;&#x901A;&#x914D;&#x539F;&#x5219;&#x8F6C;&#x4EA4;&#x7ED9;0.0.0.0_9080&#x5904;&#x7406;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x5907;&#x6CE8;&#xFF1A;<br></p>
+<ol>
+<li>&#x8BE5;&#x8F6C;&#x53D1;&#x903B;&#x8F91;&#x4E3A;&#x6839;&#x636E;Envoy&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x7684;&#x63A8;&#x6D4B;&#xFF0C;&#x5E76;&#x672A;&#x5206;&#x6790;Envoy&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;&#x6B22;&#x8FCE;&#x4E86;&#x89E3;Envoy&#x4EE3;&#x7801;&#x548C;&#x5B9E;&#x73B0;&#x673A;&#x5236;&#x7684;&#x670B;&#x53CB;&#x6307;&#x6B63;&#x3002;<br>
+2.&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;productpage&#x5E76;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;ratings&#x670D;&#x52A1;&#xFF0C;&#x4F46;Istio&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5404;&#x4E2A;&#x4E1A;&#x52A1;&#x4E4B;&#x95F4;&#x4F1A;&#x5982;&#x4F55;&#x8C03;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x5C06;&#x6240;&#x6709;&#x7684;&#x670D;&#x52A1;&#x4FE1;&#x606F;&#x90FD;&#x4E0B;&#x53D1;&#x5230;&#x4E86;Envoy&#x4E2D;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x5BF9;&#x6548;&#x7387;&#x548C;&#x6027;&#x80FD;&#x7406;&#x8BBA;&#x4E0A;&#x6709;&#x4E00;&#x5B9A;&#x5F71;&#x54CD;&#xFF0C;&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x4F18;&#x5316;&#x7A7A;&#x95F4;&#x3002;</li>
+</ol>
+</blockquote>
+<p>&#x7531;&#x4E8E;&#x5BF9;&#x5E94;&#x5230;reviews&#x3001;details&#x548C;Ratings&#x4E09;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x5F53;0.0.0.0_9080&#x63A5;&#x6536;&#x5230;&#x51FA;&#x5411;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x53D1;&#x9001;&#x5230;&#x4E00;&#x4E2A;downstream cluster&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x9700;&#x8981;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x7531;&#x3002;</p>
+<p>&#x5728;&#x8BE5;listener&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5E76;&#x6CA1;&#x6709;&#x50CF;inbound listener&#x90A3;&#x6837;&#x901A;&#x8FC7;envoy.tcp_proxy&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;downstream&#x7684;cluster&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;rds&#x914D;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;<a href="#routes">&#x8DEF;&#x7531;&#x89C4;&#x5219;9080</a>&#xFF0C;&#x5728;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x4E2D;&#x518D;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x8BF7;&#x6C42;&#x76EE;&#x7684;&#x5730;&#x5BF9;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<pre class="language-"><code>{
      &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
      &quot;listener&quot;: {
       &quot;name&quot;: &quot;0.0.0.0_9080&quot;,
@@ -1408,66 +1361,64 @@ Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outb
            &quot;http_filters&quot;: [
             {
              &quot;name&quot;: &quot;mixer&quot;,
-             &quot;config&quot;: {</p>
-<pre class="language-"><code>          ......
+             &quot;config&quot;: {
 
+              ......
+
+             }
+            },
+            {
+             &quot;name&quot;: &quot;envoy.cors&quot;
+            },
+            {
+             &quot;name&quot;: &quot;envoy.fault&quot;
+            },
+            {
+             &quot;name&quot;: &quot;envoy.router&quot;
+            }
+           ],
+           &quot;tracing&quot;: {
+            &quot;operation_name&quot;: &quot;EGRESS&quot;,
+            &quot;client_sampling&quot;: {
+             &quot;value&quot;: 100
+            },
+            &quot;overall_sampling&quot;: {
+             &quot;value&quot;: 100
+            },
+            &quot;random_sampling&quot;: {
+             &quot;value&quot;: 100
+            }
+           },
+           &quot;use_remote_address&quot;: false,
+           &quot;stat_prefix&quot;: &quot;0.0.0.0_9080&quot;,
+           &quot;rds&quot;: {
+            &quot;route_config_name&quot;: &quot;9080&quot;,
+            &quot;config_source&quot;: {
+             &quot;ads&quot;: {}
+            }
+           },
+           &quot;stream_idle_timeout&quot;: &quot;0.000s&quot;,
+           &quot;generate_request_id&quot;: true,
+           &quot;upgrade_configs&quot;: [
+            {
+             &quot;upgrade_type&quot;: &quot;websocket&quot;
+            }
+           ]
+          }
          }
-        },
-        {
-         &quot;name&quot;: &quot;envoy.cors&quot;
-        },
-        {
-         &quot;name&quot;: &quot;envoy.fault&quot;
-        },
-        {
-         &quot;name&quot;: &quot;envoy.router&quot;
-        }
-       ],
-       &quot;tracing&quot;: {
-        &quot;operation_name&quot;: &quot;EGRESS&quot;,
-        &quot;client_sampling&quot;: {
-         &quot;value&quot;: 100
-        },
-        &quot;overall_sampling&quot;: {
-         &quot;value&quot;: 100
-        },
-        &quot;random_sampling&quot;: {
-         &quot;value&quot;: 100
-        }
-       },
-       &quot;use_remote_address&quot;: false,
-       &quot;stat_prefix&quot;: &quot;0.0.0.0_9080&quot;,
-       &quot;rds&quot;: {
-        &quot;route_config_name&quot;: &quot;9080&quot;,
-        &quot;config_source&quot;: {
-         &quot;ads&quot;: {}
-        }
-       },
-       &quot;stream_idle_timeout&quot;: &quot;0.000s&quot;,
-       &quot;generate_request_id&quot;: true,
-       &quot;upgrade_configs&quot;: [
-        {
-         &quot;upgrade_type&quot;: &quot;websocket&quot;
-        }
-       ]
+        ]
+       }
+      ],
+      &quot;deprecated_v1&quot;: {
+       &quot;bind_to_port&quot;: false
       }
-     }
-    ]
-   }
-  ],
-  &quot;deprecated_v1&quot;: {
-   &quot;bind_to_port&quot;: false
-  }
- },
- &quot;last_updated&quot;: &quot;2018-09-06T09:34:26.172Z&quot;
-},
-</code></pre><pre class="language-"><code>
-#### Routes
-
-&#x914D;&#x7F6E;Envoy&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x3002;Istio&#x4E0B;&#x53D1;&#x7684;&#x7F3A;&#x7701;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x4E2D;&#x5BF9;&#x6BCF;&#x4E2A;&#x7AEF;&#x53E3;&#x8BBE;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#xFF0C;&#x6839;&#x636E;host&#x6765;&#x5BF9;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x8DEF;&#x7531;&#x5206;&#x53D1;&#x3002;
-
-&#x4E0B;&#x9762;&#x662F;9080&#x7684;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#xFF0C;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5BF9;&#x5E94;&#x4E86;3&#x4E2A;virtual host&#xFF0C;&#x5206;&#x522B;&#x662F;details&#x3001;ratings&#x548C;reviews&#xFF0C;&#x8FD9;&#x4E09;&#x4E2A;virtual host&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x5230;&#x4E0D;&#x540C;&#x7684;[outbound cluster](#outbound-cluster)&#x3002;
-</code></pre><p>{
+     },
+     &quot;last_updated&quot;: &quot;2018-09-06T09:34:26.172Z&quot;
+    },
+</code></pre><h4 id="routes">Routes</h4>
+<p>&#x914D;&#x7F6E;Envoy&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x3002;Istio&#x4E0B;&#x53D1;&#x7684;&#x7F3A;&#x7701;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x4E2D;&#x5BF9;&#x6BCF;&#x4E2A;&#x7AEF;&#x53E3;&#x8BBE;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#xFF0C;&#x6839;&#x636E;host&#x6765;&#x5BF9;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x8DEF;&#x7531;&#x5206;&#x53D1;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;9080&#x7684;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#xFF0C;&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5BF9;&#x5E94;&#x4E86;3&#x4E2A;virtual host&#xFF0C;&#x5206;&#x522B;&#x662F;details&#x3001;ratings&#x548C;reviews&#xFF0C;&#x8FD9;&#x4E09;&#x4E2A;virtual host&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x5230;&#x4E0D;&#x540C;&#x7684;<a href="#outbound-cluster">outbound cluster</a>&#x3002;</p>
+<pre class="language-"><code>{
      &quot;version_info&quot;: &quot;2018-09-14T01:38:20Z&quot;,
      &quot;route_config&quot;: {
       &quot;name&quot;: &quot;9080&quot;,
@@ -1503,134 +1454,243 @@ Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outb
           },
           &quot;per_filter_config&quot;: {
            &quot;mixer&quot;: {
-            ......</p>
-<pre class="language-"><code>       }
-      }
-     }
-    ]
+            ......
+
+           }
+          }
+         }
+        ]
+       },
+       {
+        &quot;name&quot;: &quot;ratings.default.svc.cluster.local:9080&quot;,
+        &quot;domains&quot;: [
+         &quot;ratings.default.svc.cluster.local&quot;,
+         &quot;ratings.default.svc.cluster.local:9080&quot;,
+         &quot;ratings&quot;,
+         &quot;ratings:9080&quot;,
+         &quot;ratings.default.svc.cluster&quot;,
+         &quot;ratings.default.svc.cluster:9080&quot;,
+         &quot;ratings.default.svc&quot;,
+         &quot;ratings.default.svc:9080&quot;,
+         &quot;ratings.default&quot;,
+         &quot;ratings.default:9080&quot;,
+         &quot;10.99.16.205&quot;,
+         &quot;10.99.16.205:9080&quot;
+        ],
+        &quot;routes&quot;: [
+         {
+          &quot;match&quot;: {
+           &quot;prefix&quot;: &quot;/&quot;
+          },
+          &quot;route&quot;: {
+           &quot;cluster&quot;: &quot;outbound|9080||ratings.default.svc.cluster.local&quot;,
+           &quot;timeout&quot;: &quot;0s&quot;,
+           &quot;max_grpc_timeout&quot;: &quot;0s&quot;
+          },
+          &quot;decorator&quot;: {
+           &quot;operation&quot;: &quot;ratings.default.svc.cluster.local:9080/*&quot;
+          },
+          &quot;per_filter_config&quot;: {
+           &quot;mixer&quot;: {
+           ......
+
+            },
+            &quot;disable_check_calls&quot;: true
+           }
+          }
+         }
+        ]
+       },
+       {
+        &quot;name&quot;: &quot;reviews.default.svc.cluster.local:9080&quot;,
+        &quot;domains&quot;: [
+         &quot;reviews.default.svc.cluster.local&quot;,
+         &quot;reviews.default.svc.cluster.local:9080&quot;,
+         &quot;reviews&quot;,
+         &quot;reviews:9080&quot;,
+         &quot;reviews.default.svc.cluster&quot;,
+         &quot;reviews.default.svc.cluster:9080&quot;,
+         &quot;reviews.default.svc&quot;,
+         &quot;reviews.default.svc:9080&quot;,
+         &quot;reviews.default&quot;,
+         &quot;reviews.default:9080&quot;,
+         &quot;10.108.25.157&quot;,
+         &quot;10.108.25.157:9080&quot;
+        ],
+        &quot;routes&quot;: [
+         {
+          &quot;match&quot;: {
+           &quot;prefix&quot;: &quot;/&quot;
+          },
+          &quot;route&quot;: {
+           &quot;cluster&quot;: &quot;outbound|9080||reviews.default.svc.cluster.local&quot;,
+           &quot;timeout&quot;: &quot;0s&quot;,
+           &quot;max_grpc_timeout&quot;: &quot;0s&quot;
+          },
+          &quot;decorator&quot;: {
+           &quot;operation&quot;: &quot;reviews.default.svc.cluster.local:9080/*&quot;
+          },
+          &quot;per_filter_config&quot;: {
+           &quot;mixer&quot;: {
+            ......
+
+            },
+            &quot;disable_check_calls&quot;: true
+           }
+          }
+         }
+        ]
+       }
+      ],
+      &quot;validate_clusters&quot;: false
+     },
+     &quot;last_updated&quot;: &quot;2018-09-27T07:17:50.242Z&quot;
+    }
+</code></pre><h2 id="bookinfo&#x7AEF;&#x5230;&#x7AEF;&#x8C03;&#x7528;&#x5206;&#x6790;">Bookinfo&#x7AEF;&#x5230;&#x7AEF;&#x8C03;&#x7528;&#x5206;&#x6790;</h2>
+<p>&#x901A;&#x8FC7;&#x524D;&#x9762;&#x7AE0;&#x8282;&#x5BF9;Envoy&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x4E86;&#x89E3;&#x5230;Istio&#x63A7;&#x5236;&#x9762;&#x5982;&#x4F55;&#x5C06;&#x670D;&#x52A1;&#x548C;&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x901A;&#x8FC7;xDS&#x63A5;&#x53E3;&#x4E0B;&#x53D1;&#x5230;&#x6570;&#x636E;&#x9762;&#x4E2D;&#xFF1B;&#x5E76;&#x4ECB;&#x7ECD;&#x4E86;Envoy&#x4E0A;&#x751F;&#x6210;&#x7684;&#x5404;&#x79CD;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5305;&#x62EC;listener,cluster,route&#x548C;endpoint&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x5206;&#x6790;&#x4E00;&#x4E2A;&#x7AEF;&#x5230;&#x7AEF;&#x7684;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x7684;&#x6D41;&#x7A0B;&#x628A;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x4E32;&#x8FDE;&#x8D77;&#x6765;&#xFF0C;&#x4EE5;&#x4ECE;&#x5168;&#x5C40;&#x4E0A;&#x7406;&#x89E3;Istio&#x63A7;&#x5236;&#x9762;&#x7684;&#x6D41;&#x91CF;&#x63A7;&#x5236;&#x662F;&#x5982;&#x4F55;&#x5728;&#x6570;&#x636E;&#x9762;&#x7684;Envoy&#x4E0A;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;Productpage&#x670D;&#x52A1;&#x8C03;&#x7528;Details&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<p><a href="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-traffic-route.png" data-lightbox="ab19267f-4d70-4d05-8368-dca54f77d199" data-title="" target="_blank"><img src="https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-traffic-route.png" alt=""></a>  </p>
+<ol>
+<li>Productpage&#x53D1;&#x8D77;&#x5BF9;Details&#x7684;&#x8C03;&#x7528;&#xFF1A;<code>http://details:9080/details/0</code> &#x3002;</li>
+<li>&#x8BF7;&#x6C42;&#x88AB;Pod&#x7684;iptable&#x89C4;&#x5219;&#x62E6;&#x622A;&#xFF0C;&#x8F6C;&#x53D1;&#x5230;15001&#x7AEF;&#x53E3;&#x3002;</li>
+<li>Envoy&#x7684;Virtual Listener&#x5728;15001&#x7AEF;&#x53E3;&#x4E0A;&#x76D1;&#x542C;&#xFF0C;&#x6536;&#x5230;&#x4E86;&#x8BE5;&#x8BF7;&#x6C42;&#x3002;</li>
+<li><p>&#x8BF7;&#x6C42;&#x88AB;Virtual Listener&#x6839;&#x636E;&#x539F;&#x76EE;&#x6807;IP&#xFF08;&#x901A;&#x914D;&#xFF09;&#x548C;&#x7AEF;&#x53E3;&#xFF08;9080&#xFF09;&#x8F6C;&#x53D1;&#x5230;0.0.0.0_9080&#x8FD9;&#x4E2A;listener&#x3002;</p>
+<pre class="language-"><code> {
+  &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
+  &quot;listener&quot;: {
+   &quot;name&quot;: &quot;virtual&quot;,
+   &quot;address&quot;: {
+    &quot;socket_address&quot;: {
+     &quot;address&quot;: &quot;0.0.0.0&quot;,
+     &quot;port_value&quot;: 15001
+    }
+   }
+   ......
+
+   &quot;use_original_dst&quot;: true //&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;&#x548C;&#x539F;&#x59CB;&#x76EE;&#x7684;IP:Port&#x5339;&#x914D;&#x7684;listener
+  },
+</code></pre></li>
+<li><p>&#x6839;&#x636E;0.0.0.0_9080 listener&#x7684;http_connection_manager filter&#x914D;&#x7F6E;,&#x8BE5;&#x8BF7;&#x6C42;&#x91C7;&#x7528;&#x201C;9080&#x201D; route&#x8FDB;&#x884C;&#x5206;&#x53D1;&#x3002;</p>
+<pre class="language-"><code> {
+  &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
+  &quot;listener&quot;: {
+   &quot;name&quot;: &quot;0.0.0.0_9080&quot;,
+   &quot;address&quot;: {
+    &quot;socket_address&quot;: {
+     &quot;address&quot;: &quot;0.0.0.0&quot;,
+     &quot;port_value&quot;: 9080
+    }
    },
-   {
-    &quot;name&quot;: &quot;ratings.default.svc.cluster.local:9080&quot;,
-    &quot;domains&quot;: [
-     &quot;ratings.default.svc.cluster.local&quot;,
-     &quot;ratings.default.svc.cluster.local:9080&quot;,
-     &quot;ratings&quot;,
-     &quot;ratings:9080&quot;,
-     &quot;ratings.default.svc.cluster&quot;,
-     &quot;ratings.default.svc.cluster:9080&quot;,
-     &quot;ratings.default.svc&quot;,
-     &quot;ratings.default.svc:9080&quot;,
-     &quot;ratings.default&quot;,
-     &quot;ratings.default:9080&quot;,
-     &quot;10.99.16.205&quot;,
-     &quot;10.99.16.205:9080&quot;
-    ],
-    &quot;routes&quot;: [
-     {
-      &quot;match&quot;: {
-       &quot;prefix&quot;: &quot;/&quot;
-      },
-      &quot;route&quot;: {
-       &quot;cluster&quot;: &quot;outbound|9080||ratings.default.svc.cluster.local&quot;,
-       &quot;timeout&quot;: &quot;0s&quot;,
-       &quot;max_grpc_timeout&quot;: &quot;0s&quot;
-      },
-      &quot;decorator&quot;: {
-       &quot;operation&quot;: &quot;ratings.default.svc.cluster.local:9080/*&quot;
-      },
-      &quot;per_filter_config&quot;: {
-       &quot;mixer&quot;: {
+   &quot;filter_chains&quot;: [
+    {
+     &quot;filters&quot;: [
+      {
+       &quot;name&quot;: &quot;envoy.http_connection_manager&quot;,
+       &quot;config&quot;: {
        ......
 
+        &quot;rds&quot;: {
+         &quot;route_config_name&quot;: &quot;9080&quot;,
+         &quot;config_source&quot;: {
+          &quot;ads&quot;: {}
+         }
         },
-        &quot;disable_check_calls&quot;: true
+
+      }
+     ]
+    }
+   ],
+   &quot;deprecated_v1&quot;: {
+    &quot;bind_to_port&quot;: false
+   }
+  },
+  &quot;last_updated&quot;: &quot;2018-09-06T09:34:26.172Z&quot;
+ },
+
+ {
+  },
+</code></pre></li>
+<li><p>&#x201C;9080&#x201D;&#x8FD9;&#x4E2A;route&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;host name&#x4E3A;details:9080&#x7684;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x7684;cluster&#x4E3A;outbound|9080||details.default.svc.cluster.local</p>
+<pre class="language-"><code>{
+  &quot;version_info&quot;: &quot;2018-09-14T01:38:20Z&quot;,
+  &quot;route_config&quot;: {
+   &quot;name&quot;: &quot;9080&quot;,
+   &quot;virtual_hosts&quot;: [
+    {
+     &quot;name&quot;: &quot;details.default.svc.cluster.local:9080&quot;,
+     &quot;domains&quot;: [
+      &quot;details.default.svc.cluster.local&quot;,
+      &quot;details.default.svc.cluster.local:9080&quot;,
+      &quot;details&quot;,
+      &quot;details:9080&quot;,
+      &quot;details.default.svc.cluster&quot;,
+      &quot;details.default.svc.cluster:9080&quot;,
+      &quot;details.default.svc&quot;,
+      &quot;details.default.svc:9080&quot;,
+      &quot;details.default&quot;,
+      &quot;details.default:9080&quot;,
+      &quot;10.101.163.201&quot;,
+      &quot;10.101.163.201:9080&quot;
+     ],
+     &quot;routes&quot;: [
+      {
+       &quot;match&quot;: {
+        &quot;prefix&quot;: &quot;/&quot;
+       },
+       &quot;route&quot;: {
+        &quot;cluster&quot;: &quot;outbound|9080||details.default.svc.cluster.local&quot;,
+        &quot;timeout&quot;: &quot;0s&quot;,
+        &quot;max_grpc_timeout&quot;: &quot;0s&quot;
+       },
+         ......
+
+        }
        }
       }
-     }
-    ]
+     ]
+    },
+    ......
+
+ {
+  },
+</code></pre></li>
+<li><p>outbound|9080||details.default.svc.cluster.local cluster&#x4E3A;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x901A;&#x8FC7;eds&#x67E5;&#x8BE2;&#x5F97;&#x5230;&#x5176;endpoint&#x4E3A;192.168.206.21:9080&#x3002;</p>
+<pre class="language-"><code>{
+&quot;clusterName&quot;: &quot;outbound|9080||details.default.svc.cluster.local&quot;,
+&quot;endpoints&quot;: [
+ {
+   &quot;locality&quot;: {
+
    },
-   {
-    &quot;name&quot;: &quot;reviews.default.svc.cluster.local:9080&quot;,
-    &quot;domains&quot;: [
-     &quot;reviews.default.svc.cluster.local&quot;,
-     &quot;reviews.default.svc.cluster.local:9080&quot;,
-     &quot;reviews&quot;,
-     &quot;reviews:9080&quot;,
-     &quot;reviews.default.svc.cluster&quot;,
-     &quot;reviews.default.svc.cluster:9080&quot;,
-     &quot;reviews.default.svc&quot;,
-     &quot;reviews.default.svc:9080&quot;,
-     &quot;reviews.default&quot;,
-     &quot;reviews.default:9080&quot;,
-     &quot;10.108.25.157&quot;,
-     &quot;10.108.25.157:9080&quot;
-    ],
-    &quot;routes&quot;: [
+   &quot;lbEndpoints&quot;: [
      {
-      &quot;match&quot;: {
-       &quot;prefix&quot;: &quot;/&quot;
-      },
-      &quot;route&quot;: {
-       &quot;cluster&quot;: &quot;outbound|9080||reviews.default.svc.cluster.local&quot;,
-       &quot;timeout&quot;: &quot;0s&quot;,
-       &quot;max_grpc_timeout&quot;: &quot;0s&quot;
-      },
-      &quot;decorator&quot;: {
-       &quot;operation&quot;: &quot;reviews.default.svc.cluster.local:9080/*&quot;
-      },
-      &quot;per_filter_config&quot;: {
-       &quot;mixer&quot;: {
-        ......
-
-        },
-        &quot;disable_check_calls&quot;: true
-       }
-      }
+       &quot;endpoint&quot;: {
+         &quot;address&quot;: {
+           &quot;socketAddress&quot;: {
+             &quot;address&quot;: &quot;192.168.206.21&quot;,
+             &quot;portValue&quot;: 9080
+           }
+         }
+       },
+      ......  
      }
-    ]
-   }
-  ],
-  &quot;validate_clusters&quot;: false
- },
- &quot;last_updated&quot;: &quot;2018-09-27T07:17:50.242Z&quot;
+   ]
+ }
+]
 }
-</code></pre><pre class="language-"><code>
-## Bookinfo&#x7AEF;&#x5230;&#x7AEF;&#x8C03;&#x7528;&#x5206;&#x6790;
-
-&#x901A;&#x8FC7;&#x524D;&#x9762;&#x7AE0;&#x8282;&#x5BF9;Envoy&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x4E86;&#x89E3;&#x5230;Istio&#x63A7;&#x5236;&#x9762;&#x5982;&#x4F55;&#x5C06;&#x670D;&#x52A1;&#x548C;&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x901A;&#x8FC7;xDS&#x63A5;&#x53E3;&#x4E0B;&#x53D1;&#x5230;&#x6570;&#x636E;&#x9762;&#x4E2D;&#xFF1B;&#x5E76;&#x4ECB;&#x7ECD;&#x4E86;Envoy&#x4E0A;&#x751F;&#x6210;&#x7684;&#x5404;&#x79CD;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5305;&#x62EC;listener,cluster,route&#x548C;endpoint&#x3002;
-
-&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x5206;&#x6790;&#x4E00;&#x4E2A;&#x7AEF;&#x5230;&#x7AEF;&#x7684;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x8BF7;&#x6C42;&#x7684;&#x6D41;&#x7A0B;&#x628A;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x4E32;&#x8FDE;&#x8D77;&#x6765;&#xFF0C;&#x4EE5;&#x4ECE;&#x5168;&#x5C40;&#x4E0A;&#x7406;&#x89E3;Istio&#x63A7;&#x5236;&#x9762;&#x7684;&#x6D41;&#x91CF;&#x63A7;&#x5236;&#x662F;&#x5982;&#x4F55;&#x5728;&#x6570;&#x636E;&#x9762;&#x7684;Envoy&#x4E0A;&#x5B9E;&#x73B0;&#x7684;&#x3002;
-
-&#x4E0B;&#x56FE;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;Productpage&#x670D;&#x52A1;&#x8C03;&#x7528;Details&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x6D41;&#x7A0B;&#xFF1A;
-
-![](https://zhaohuabing.com/img/2018-09-25-istio-traffic-management-impl-intro/envoy-traffic-route.png)  
-
-1. Productpage&#x53D1;&#x8D77;&#x5BF9;Details&#x7684;&#x8C03;&#x7528;&#xFF1A;`http://details:9080/details/0` &#x3002;
-2. &#x8BF7;&#x6C42;&#x88AB;Pod&#x7684;iptable&#x89C4;&#x5219;&#x62E6;&#x622A;&#xFF0C;&#x8F6C;&#x53D1;&#x5230;15001&#x7AEF;&#x53E3;&#x3002;
-3. Envoy&#x7684;Virtual Listener&#x5728;15001&#x7AEF;&#x53E3;&#x4E0A;&#x76D1;&#x542C;&#xFF0C;&#x6536;&#x5230;&#x4E86;&#x8BE5;&#x8BF7;&#x6C42;&#x3002;
-4. &#x8BF7;&#x6C42;&#x88AB;Virtual Listener&#x6839;&#x636E;&#x539F;&#x76EE;&#x6807;IP&#xFF08;&#x901A;&#x914D;&#xFF09;&#x548C;&#x7AEF;&#x53E3;&#xFF08;9080&#xFF09;&#x8F6C;&#x53D1;&#x5230;0.0.0.0_9080&#x8FD9;&#x4E2A;listener&#x3002;
-</code></pre><pre class="language-"><code>{
- &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
+</code></pre></li>
+<li>&#x8BF7;&#x6C42;&#x88AB;&#x8F6C;&#x53D1;&#x5230;192.168.206.21&#xFF0C;&#x5373;Details&#x670D;&#x52A1;&#x6240;&#x5728;&#x7684;Pod&#xFF0C;&#x88AB;iptable&#x89C4;&#x5219;&#x62E6;&#x622A;&#xFF0C;&#x8F6C;&#x53D1;&#x5230;15001&#x7AEF;&#x53E3;&#x3002;</li>
+<li>Envoy&#x7684;Virtual Listener&#x5728;15001&#x7AEF;&#x53E3;&#x4E0A;&#x76D1;&#x542C;&#xFF0C;&#x6536;&#x5230;&#x4E86;&#x8BE5;&#x8BF7;&#x6C42;&#x3002;</li>
+<li>&#x8BF7;&#x6C42;&#x88AB;Virtual Listener&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x539F;&#x76EE;&#x6807;&#x5730;&#x5740;IP&#xFF08;192.168.206.21&#xFF09;&#x548C;&#x7AEF;&#x53E3;&#xFF08;9080&#xFF09;&#x8F6C;&#x53D1;&#x5230;192.168.206.21_9080&#x8FD9;&#x4E2A;listener&#x3002;</li>
+<li><p>&#x6839;&#x636E;92.168.206.21_9080 listener&#x7684;http_connection_manager filter&#x914D;&#x7F6E;,&#x8BE5;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x7684;cluster&#x4E3A; inbound|9080||details.default.svc.cluster.local &#x3002;</p>
+<pre class="language-"><code>{
+ &quot;version_info&quot;: &quot;2018-09-06T09:34:16Z&quot;,
  &quot;listener&quot;: {
-  &quot;name&quot;: &quot;virtual&quot;,
+  &quot;name&quot;: &quot;192.168.206.21_9080&quot;,
   &quot;address&quot;: {
    &quot;socket_address&quot;: {
-    &quot;address&quot;: &quot;0.0.0.0&quot;,
-    &quot;port_value&quot;: 15001
-   }
-  }
-  ......
-
-  &quot;use_original_dst&quot;: true //&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;&#x548C;&#x539F;&#x59CB;&#x76EE;&#x7684;IP:Port&#x5339;&#x914D;&#x7684;listener
- },
-</code></pre><pre class="language-"><code>5. &#x6839;&#x636E;0.0.0.0_9080 listener&#x7684;http_connection_manager filter&#x914D;&#x7F6E;,&#x8BE5;&#x8BF7;&#x6C42;&#x91C7;&#x7528;&#x201C;9080&#x201D; route&#x8FDB;&#x884C;&#x5206;&#x53D1;&#x3002;
-</code></pre><pre class="language-"><code>{
- &quot;version_info&quot;: &quot;2018-09-06T09:34:19Z&quot;,
- &quot;listener&quot;: {
-  &quot;name&quot;: &quot;0.0.0.0_9080&quot;,
-  &quot;address&quot;: {
-   &quot;socket_address&quot;: {
-    &quot;address&quot;: &quot;0.0.0.0&quot;,
+    &quot;address&quot;: &quot;192.168.206.21&quot;,
     &quot;port_value&quot;: 9080
    }
   },
@@ -1639,117 +1699,9 @@ Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outb
     &quot;filters&quot;: [
      {
       &quot;name&quot;: &quot;envoy.http_connection_manager&quot;,
-      &quot;config&quot;: {
       ......
 
-       &quot;rds&quot;: {
-        &quot;route_config_name&quot;: &quot;9080&quot;,
-        &quot;config_source&quot;: {
-         &quot;ads&quot;: {}
-        }
-       },
-
-     }
-    ]
-   }
-  ],
-  &quot;deprecated_v1&quot;: {
-   &quot;bind_to_port&quot;: false
-  }
- },
- &quot;last_updated&quot;: &quot;2018-09-06T09:34:26.172Z&quot;
-},
-
-{
- },
-</code></pre><pre class="language-"><code>
-6. &#x201C;9080&#x201D;&#x8FD9;&#x4E2A;route&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#xFF0C;host name&#x4E3A;details:9080&#x7684;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x7684;cluster&#x4E3A;outbound|9080||details.default.svc.cluster.local
-</code></pre><p>{
-     &quot;version_info&quot;: &quot;2018-09-14T01:38:20Z&quot;,
-     &quot;route_config&quot;: {
-      &quot;name&quot;: &quot;9080&quot;,
-      &quot;virtual_hosts&quot;: [
-       {
-        &quot;name&quot;: &quot;details.default.svc.cluster.local:9080&quot;,
-        &quot;domains&quot;: [
-         &quot;details.default.svc.cluster.local&quot;,
-         &quot;details.default.svc.cluster.local:9080&quot;,
-         &quot;details&quot;,
-         &quot;details:9080&quot;,
-         &quot;details.default.svc.cluster&quot;,
-         &quot;details.default.svc.cluster:9080&quot;,
-         &quot;details.default.svc&quot;,
-         &quot;details.default.svc:9080&quot;,
-         &quot;details.default&quot;,
-         &quot;details.default:9080&quot;,
-         &quot;10.101.163.201&quot;,
-         &quot;10.101.163.201:9080&quot;
-        ],
-        &quot;routes&quot;: [
-         {
-          &quot;match&quot;: {
-           &quot;prefix&quot;: &quot;/&quot;
-          },
-          &quot;route&quot;: {
-           &quot;cluster&quot;: &quot;outbound|9080||details.default.svc.cluster.local&quot;,
-           &quot;timeout&quot;: &quot;0s&quot;,
-           &quot;max_grpc_timeout&quot;: &quot;0s&quot;
-          },
-            ......</p>
-<pre class="language-"><code>       }
-      }
-     }
-    ]
-   },
-   ......
-
-{
- },
-</code></pre><pre class="language-"><code>
-7. outbound|9080||details.default.svc.cluster.local cluster&#x4E3A;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x901A;&#x8FC7;eds&#x67E5;&#x8BE2;&#x5F97;&#x5230;&#x5176;endpoint&#x4E3A;192.168.206.21:9080&#x3002;
-</code></pre><p>{
-  &quot;clusterName&quot;: &quot;outbound|9080||details.default.svc.cluster.local&quot;,
-  &quot;endpoints&quot;: [
-    {
-      &quot;locality&quot;: {</p>
-<pre class="language-"><code>  },
-  &quot;lbEndpoints&quot;: [
-    {
-      &quot;endpoint&quot;: {
-        &quot;address&quot;: {
-          &quot;socketAddress&quot;: {
-            &quot;address&quot;: &quot;192.168.206.21&quot;,
-            &quot;portValue&quot;: 9080
-          }
-        }
-      },
-     ......  
-    }
-  ]
-}
-</code></pre><p>  ]
-}</p>
-<pre class="language-"><code>8. &#x8BF7;&#x6C42;&#x88AB;&#x8F6C;&#x53D1;&#x5230;192.168.206.21&#xFF0C;&#x5373;Details&#x670D;&#x52A1;&#x6240;&#x5728;&#x7684;Pod&#xFF0C;&#x88AB;iptable&#x89C4;&#x5219;&#x62E6;&#x622A;&#xFF0C;&#x8F6C;&#x53D1;&#x5230;15001&#x7AEF;&#x53E3;&#x3002;
-9. Envoy&#x7684;Virtual Listener&#x5728;15001&#x7AEF;&#x53E3;&#x4E0A;&#x76D1;&#x542C;&#xFF0C;&#x6536;&#x5230;&#x4E86;&#x8BE5;&#x8BF7;&#x6C42;&#x3002;
-10. &#x8BF7;&#x6C42;&#x88AB;Virtual Listener&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x539F;&#x76EE;&#x6807;&#x5730;&#x5740;IP&#xFF08;192.168.206.21&#xFF09;&#x548C;&#x7AEF;&#x53E3;&#xFF08;9080&#xFF09;&#x8F6C;&#x53D1;&#x5230;192.168.206.21_9080&#x8FD9;&#x4E2A;listener&#x3002;
-11. &#x6839;&#x636E;92.168.206.21_9080 listener&#x7684;http_connection_manager filter&#x914D;&#x7F6E;,&#x8BE5;&#x8BF7;&#x6C42;&#x5BF9;&#x5E94;&#x7684;cluster&#x4E3A; inbound|9080||details.default.svc.cluster.local &#x3002;
-</code></pre><p>{
-     &quot;version_info&quot;: &quot;2018-09-06T09:34:16Z&quot;,
-     &quot;listener&quot;: {
-      &quot;name&quot;: &quot;192.168.206.21_9080&quot;,
-      &quot;address&quot;: {
-       &quot;socket_address&quot;: {
-        &quot;address&quot;: &quot;192.168.206.21&quot;,
-        &quot;port_value&quot;: 9080
-       }
-      },
-      &quot;filter_chains&quot;: [
-       {
-        &quot;filters&quot;: [
-         {
-          &quot;name&quot;: &quot;envoy.http_connection_manager&quot;,
-          ......</p>
-<pre class="language-"><code>      &quot;route_config&quot;: {
+      &quot;route_config&quot;: {
         &quot;name&quot;: &quot;inbound|9080||details.default.svc.cluster.local&quot;,
         &quot;validate_clusters&quot;: false,
         &quot;virtual_hosts&quot;: [
@@ -1790,8 +1742,7 @@ Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outb
  },
  &quot;last_updated&quot;: &quot;2018-09-06T09:34:22.184Z&quot;
 }
-</code></pre><p>```</p>
-<ol>
+</code></pre></li>
 <li>inbound|9080||details.default.svc.cluster.local cluster&#x914D;&#x7F6E;&#x7684;host&#x4E3A;127.0.0.1&#xFF1A;9080&#x3002;</li>
 <li>&#x8BF7;&#x6C42;&#x88AB;&#x8F6C;&#x53D1;&#x5230;127.0.0.1&#xFF1A;9080&#xFF0C;&#x5373;Details&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</li>
 </ol>
@@ -1816,8 +1767,8 @@ Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outb
 <li><a id="ref09"></a><a href="https://zhaohuabing.com/2018/05/23/istio-auto-injection-with-webhook/" target="_blank">Istio Sidecar&#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x539F;&#x7406;</a></li>
 </ol>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; zhaohuabing.com 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
-2019-03-30 22:42:56
-</span></footer></body></html>
+2020-05-26 09:08:50
+</span></footer>
                                 
                                 </section>
                             
@@ -1860,7 +1811,7 @@ Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outb
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对Bookinfo进行端到端分析","level":"1.3.4","depth":2,"next":{"title":"如何为服务网格选择入口网关","level":"1.4","depth":1,"path":"content/ingress/README.md","ref":"content/ingress/README.md","articles":[{"title":"内部通讯-ClusterIP","level":"1.4.1","depth":2,"path":"content/ingress/cluster-ip.md","ref":"content/ingress/cluster-ip.md","articles":[]},{"title":"内部通讯-Sidecar Proxy","level":"1.4.2","depth":2,"path":"content/ingress/istio-sidecar-proxy.md","ref":"content/ingress/istio-sidecar-proxy.md","articles":[]},{"title":"外部通信-NodePort","level":"1.4.3","depth":2,"path":"content/ingress/nodeport.md","ref":"content/ingress/nodeport.md","articles":[]},{"title":"外部通讯-LoadBalancer","level":"1.4.4","depth":2,"path":"content/ingress/loadbalancer.md","ref":"content/ingress/loadbalancer.md","articles":[]},{"title":"外部通讯-Ingress","level":"1.4.5","depth":2,"path":"content/ingress/ingress.md","ref":"content/ingress/ingress.md","articles":[]},{"title":"采用K8s Ingress作为网格的流量入口","level":"1.4.6","depth":2,"path":"content/ingress/k8s-ingress-as-mesh-gateway.md","ref":"content/ingress/k8s-ingress-as-mesh-gateway.md","articles":[]},{"title":"采用Istio Gateway作为网络的流量入口","level":"1.4.7","depth":2,"path":"content/ingress/istio-gateway-as-mesh-gateway.md","ref":"content/ingress/istio-gateway-as-mesh-gateway.md","articles":[]},{"title":"服务化应用对API Gateway的功能需求","level":"1.4.8","depth":2,"path":"content/ingress/api-gateway-requirement.md","ref":"content/ingress/api-gateway-requirement.md","articles":[]},{"title":"服务网格入口网关的解决方案","level":"1.4.9","depth":2,"path":"content/ingress/mesh-gateway-solution.md","ref":"content/ingress/mesh-gateway-solution.md","articles":[]}]},"previous":{"title":"数据面标准接口","level":"1.3.3","depth":2,"path":"content/traffic-management/data-plane-api.md","ref":"content/traffic-management/data-plane-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","ga","disqus","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaohuabing.com 2019","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"disqus":{"useIdentifier":false,"shortName":"istio-practice"},"github":{"url":"https://github.com/zhaohuabing/istio-practice"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/zhaohuabing/istio-practice/edit/master"},"livereload":{},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://zhaohuabing.com/istio-practice/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"zhaohuabing/istio-practice","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"2a54d5341d3d877af22d3556d24bb992"},"ga":{"configuration":"auto","token":"UA-137374552-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"赵化冰","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"home":"https://zhaohuabing.com","_pictures":[{"backlink":"content/ingress/cluster-ip.html#fig1.4.1.1","level":"1.4.1","list_caption":"Figure: Kube-proxy userspace模式","alt":"Kube-proxy userspace模式","nro":1,"url":"https://d33wubrfki0l68.cloudfront.net/e351b830334b8622a700a8da6568cb081c464a9b/13020/images/docs/services-userspace-overview.svg","index":1,"caption_template":"图片 - _CAPTION_","label":"Kube-proxy userspace模式","attributes":{},"skip":false,"key":"1.4.1.1"},{"backlink":"content/ingress/cluster-ip.html#fig1.4.1.2","level":"1.4.1","list_caption":"Figure: Kube-proxy iptables模式","alt":"Kube-proxy iptables模式","nro":2,"url":"https://d33wubrfki0l68.cloudfront.net/27b2978647a8d7bdc2a96b213f0c0d3242ef9ce0/e8c9b/images/docs/services-iptables-overview.svg","index":2,"caption_template":"图片 - _CAPTION_","label":"Kube-proxy iptables模式","attributes":{},"skip":false,"key":"1.4.1.2"},{"backlink":"content/ingress/istio-sidecar-proxy.html#fig1.4.2.1","level":"1.4.2","list_caption":"Figure: Istio Sidecar Proxy","alt":"Istio Sidecar Proxy","nro":3,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Istio-inter-services-communication.jpg","index":1,"caption_template":"图片 - _CAPTION_","label":"Istio Sidecar Proxy","attributes":{},"skip":false,"key":"1.4.2.1"},{"backlink":"content/ingress/nodeport.html#fig1.4.3.1","level":"1.4.3","list_caption":"Figure: NodePort","alt":"NodePort","nro":4,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/NodePort.jpg","index":1,"caption_template":"图片 - _CAPTION_","label":"NodePort","attributes":{},"skip":false,"key":"1.4.3.1"},{"backlink":"content/ingress/loadbalancer.html#fig1.4.4.1","level":"1.4.4","list_caption":"Figure: NodeBalancer","alt":"NodeBalancer","nro":5,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Load-Balancer.png","index":1,"caption_template":"图片 - _CAPTION_","label":"NodeBalancer","attributes":{},"skip":false,"key":"1.4.4.1"},{"backlink":"content/ingress/ingress.html#fig1.4.5.1","level":"1.4.5","list_caption":"Figure: Simple fanout","alt":"Simple fanout","nro":6,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress-url-fanout.png","index":1,"caption_template":"图片 - _CAPTION_","label":"Simple fanout","attributes":{},"skip":false,"key":"1.4.5.1"},{"backlink":"content/ingress/ingress.html#fig1.4.5.2","level":"1.4.5","list_caption":"Figure: Name based virtual hosting","alt":"Name based virtual hosting","nro":7,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress-name-based-route.png","index":2,"caption_template":"图片 - _CAPTION_","label":"Name based virtual hosting","attributes":{},"skip":false,"key":"1.4.5.2"},{"backlink":"content/ingress/ingress.html#fig1.4.5.3","level":"1.4.5","list_caption":"Figure: 采用Ingress, NodePortal和LoadBalancer提供外部流量入口的拓扑结构","alt":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的拓扑结构","nro":8,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress+Nodeport+LoadBalancer-Topo.png","index":3,"caption_template":"图片 - _CAPTION_","label":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的拓扑结构","attributes":{},"skip":false,"key":"1.4.5.3"},{"backlink":"content/ingress/ingress.html#fig1.4.5.4","level":"1.4.5","list_caption":"Figure: 采用Ingress, NodePortal和LoadBalancer提供外部流量入口的实现原理","alt":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的实现原理","nro":9,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress+NodePort+LoadBalancer-deep-dive.png","index":4,"caption_template":"图片 - _CAPTION_","label":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的实现原理","attributes":{},"skip":false,"key":"1.4.5.4"},{"backlink":"content/ingress/k8s-ingress-as-mesh-gateway.html#fig1.4.6.1","level":"1.4.6","list_caption":"Figure: 采用Kubernetes Ingress作为服务网格的流量入口","alt":"采用Kubernetes Ingress作为服务网格的流量入口","nro":10,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/K8s-ingress-and-Istio.png","index":1,"caption_template":"图片 - _CAPTION_","label":"采用Kubernetes Ingress作为服务网格的流量入口","attributes":{},"skip":false,"key":"1.4.6.1"},{"backlink":"content/ingress/istio-gateway-as-mesh-gateway.html#fig1.4.7.1","level":"1.4.7","list_caption":"Figure: 采用 Istio Ingress Gateway作为服务网格的流量入口","alt":"采用 Istio Ingress Gateway作为服务网格的流量入口","nro":11,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Istio-Ingress.png","index":1,"caption_template":"图片 - _CAPTION_","label":"采用 Istio Ingress Gateway作为服务网格的流量入口","attributes":{},"skip":false,"key":"1.4.7.1"},{"backlink":"content/ingress/api-gateway-requirement.html#fig1.4.8.1","level":"1.4.8","list_caption":"Figure: Kubernetes ingress, Istio gateway and API gateway的功能对比","alt":"Kubernetes ingress, Istio gateway and API gateway的功能对比","nro":12,"url":"https://zhaohuabing.com/img/2018-12-27-the-obstacles-to-put-istio-into-production/ingress-comparation.png","index":1,"caption_template":"图片 - _CAPTION_","label":"Kubernetes ingress, Istio gateway and API gateway的功能对比","attributes":{},"skip":false,"key":"1.4.8.1"},{"backlink":"content/ingress/mesh-gateway-solution.html#fig1.4.9.1","level":"1.4.9","list_caption":"Figure: 采用API Gateway + Sidecar Proxy为服务网格提供流量入口","alt":"采用API Gateway + Sidecar Proxy为服务网格提供流量入口","nro":13,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/API-Gateway-and-Sidecar-Proxy-as-Ingress-for-Istio.png","index":1,"caption_template":"图片 - _CAPTION_","label":"采用API Gateway + Sidecar Proxy为服务网格提供流量入口","attributes":{},"skip":false,"key":"1.4.9.1"}]},"title":"Istio深度解析与项目实践","language":"zh-hans","links":{"sidebar":{"zhaohuabing.com":"https://zhaohuabing.com"}},"gitbook":">=3.2.0","description":"Istio深度解析与项目实践","extension":null},"file":{"path":"content/traffic-management/bookinfo.md","mtime":"2019-03-30T14:42:56.900Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-30T14:38:10.607Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"对Bookinfo进行端到端分析","level":"1.3.4","depth":2,"next":{"title":"如何为服务网格选择入口网关","level":"1.4","depth":1,"path":"content/ingress/README.md","ref":"content/ingress/README.md","articles":[{"title":"内部通讯-ClusterIP","level":"1.4.1","depth":2,"path":"content/ingress/cluster-ip.md","ref":"content/ingress/cluster-ip.md","articles":[]},{"title":"内部通讯-Sidecar Proxy","level":"1.4.2","depth":2,"path":"content/ingress/istio-sidecar-proxy.md","ref":"content/ingress/istio-sidecar-proxy.md","articles":[]},{"title":"外部通信-NodePort","level":"1.4.3","depth":2,"path":"content/ingress/nodeport.md","ref":"content/ingress/nodeport.md","articles":[]},{"title":"外部通讯-LoadBalancer","level":"1.4.4","depth":2,"path":"content/ingress/loadbalancer.md","ref":"content/ingress/loadbalancer.md","articles":[]},{"title":"外部通讯-Ingress","level":"1.4.5","depth":2,"path":"content/ingress/ingress.md","ref":"content/ingress/ingress.md","articles":[]},{"title":"采用K8s Ingress作为网格的流量入口","level":"1.4.6","depth":2,"path":"content/ingress/k8s-ingress-as-mesh-gateway.md","ref":"content/ingress/k8s-ingress-as-mesh-gateway.md","articles":[]},{"title":"采用Istio Gateway作为网络的流量入口","level":"1.4.7","depth":2,"path":"content/ingress/istio-gateway-as-mesh-gateway.md","ref":"content/ingress/istio-gateway-as-mesh-gateway.md","articles":[]},{"title":"服务化应用对API Gateway的功能需求","level":"1.4.8","depth":2,"path":"content/ingress/api-gateway-requirement.md","ref":"content/ingress/api-gateway-requirement.md","articles":[]},{"title":"服务网格入口网关的解决方案","level":"1.4.9","depth":2,"path":"content/ingress/mesh-gateway-solution.md","ref":"content/ingress/mesh-gateway-solution.md","articles":[]}]},"previous":{"title":"数据面标准接口","level":"1.3.3","depth":2,"path":"content/traffic-management/data-plane-api.md","ref":"content/traffic-management/data-plane-api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","image-captions","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","ga","disqus","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © zhaohuabing.com 2019","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"disqus":{"useIdentifier":false,"shortName":"istio-practice"},"github":{"url":"https://github.com/zhaohuabing/istio-practice"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/zhaohuabing/istio-practice/edit/master"},"livereload":{},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://zhaohuabing.com/istio-practice/"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"zhaohuabing/istio-practice","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"2a54d5341d3d877af22d3556d24bb992"},"ga":{"configuration":"auto","token":"UA-137374552-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"赵化冰","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"home":"https://zhaohuabing.com","_pictures":[{"backlink":"content/ingress/cluster-ip.html#fig1.4.1.1","level":"1.4.1","list_caption":"Figure: Kube-proxy userspace模式","alt":"Kube-proxy userspace模式","nro":1,"url":"https://d33wubrfki0l68.cloudfront.net/e351b830334b8622a700a8da6568cb081c464a9b/13020/images/docs/services-userspace-overview.svg","index":1,"caption_template":"图片 - _CAPTION_","label":"Kube-proxy userspace模式","attributes":{},"skip":false,"key":"1.4.1.1"},{"backlink":"content/ingress/cluster-ip.html#fig1.4.1.2","level":"1.4.1","list_caption":"Figure: Kube-proxy iptables模式","alt":"Kube-proxy iptables模式","nro":2,"url":"https://d33wubrfki0l68.cloudfront.net/27b2978647a8d7bdc2a96b213f0c0d3242ef9ce0/e8c9b/images/docs/services-iptables-overview.svg","index":2,"caption_template":"图片 - _CAPTION_","label":"Kube-proxy iptables模式","attributes":{},"skip":false,"key":"1.4.1.2"},{"backlink":"content/ingress/istio-sidecar-proxy.html#fig1.4.2.1","level":"1.4.2","list_caption":"Figure: Istio Sidecar Proxy","alt":"Istio Sidecar Proxy","nro":3,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Istio-inter-services-communication.jpg","index":1,"caption_template":"图片 - _CAPTION_","label":"Istio Sidecar Proxy","attributes":{},"skip":false,"key":"1.4.2.1"},{"backlink":"content/ingress/nodeport.html#fig1.4.3.1","level":"1.4.3","list_caption":"Figure: NodePort","alt":"NodePort","nro":4,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/NodePort.jpg","index":1,"caption_template":"图片 - _CAPTION_","label":"NodePort","attributes":{},"skip":false,"key":"1.4.3.1"},{"backlink":"content/ingress/loadbalancer.html#fig1.4.4.1","level":"1.4.4","list_caption":"Figure: NodeBalancer","alt":"NodeBalancer","nro":5,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Load-Balancer.png","index":1,"caption_template":"图片 - _CAPTION_","label":"NodeBalancer","attributes":{},"skip":false,"key":"1.4.4.1"},{"backlink":"content/ingress/ingress.html#fig1.4.5.1","level":"1.4.5","list_caption":"Figure: Simple fanout","alt":"Simple fanout","nro":6,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress-url-fanout.png","index":1,"caption_template":"图片 - _CAPTION_","label":"Simple fanout","attributes":{},"skip":false,"key":"1.4.5.1"},{"backlink":"content/ingress/ingress.html#fig1.4.5.2","level":"1.4.5","list_caption":"Figure: Name based virtual hosting","alt":"Name based virtual hosting","nro":7,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress-name-based-route.png","index":2,"caption_template":"图片 - _CAPTION_","label":"Name based virtual hosting","attributes":{},"skip":false,"key":"1.4.5.2"},{"backlink":"content/ingress/ingress.html#fig1.4.5.3","level":"1.4.5","list_caption":"Figure: 采用Ingress, NodePortal和LoadBalancer提供外部流量入口的拓扑结构","alt":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的拓扑结构","nro":8,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress+Nodeport+LoadBalancer-Topo.png","index":3,"caption_template":"图片 - _CAPTION_","label":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的拓扑结构","attributes":{},"skip":false,"key":"1.4.5.3"},{"backlink":"content/ingress/ingress.html#fig1.4.5.4","level":"1.4.5","list_caption":"Figure: 采用Ingress, NodePortal和LoadBalancer提供外部流量入口的实现原理","alt":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的实现原理","nro":9,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Ingress+NodePort+LoadBalancer-deep-dive.png","index":4,"caption_template":"图片 - _CAPTION_","label":"采用Ingress, NodePortal和LoadBalancer提供外部流量入口的实现原理","attributes":{},"skip":false,"key":"1.4.5.4"},{"backlink":"content/ingress/k8s-ingress-as-mesh-gateway.html#fig1.4.6.1","level":"1.4.6","list_caption":"Figure: 采用Kubernetes Ingress作为服务网格的流量入口","alt":"采用Kubernetes Ingress作为服务网格的流量入口","nro":10,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/K8s-ingress-and-Istio.jpg","index":1,"caption_template":"图片 - _CAPTION_","label":"采用Kubernetes Ingress作为服务网格的流量入口","attributes":{},"skip":false,"key":"1.4.6.1"},{"backlink":"content/ingress/istio-gateway-as-mesh-gateway.html#fig1.4.7.1","level":"1.4.7","list_caption":"Figure: 采用 Istio Ingress Gateway作为服务网格的流量入口","alt":"采用 Istio Ingress Gateway作为服务网格的流量入口","nro":11,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Istio-Ingress.jpg","index":1,"caption_template":"图片 - _CAPTION_","label":"采用 Istio Ingress Gateway作为服务网格的流量入口","attributes":{},"skip":false,"key":"1.4.7.1"},{"backlink":"content/ingress/api-gateway-requirement.html#fig1.4.8.1","level":"1.4.8","list_caption":"Figure: Kubernetes ingress, Istio gateway and API gateway的功能对比","alt":"Kubernetes ingress, Istio gateway and API gateway的功能对比","nro":12,"url":"https://zhaohuabing.com/img/2018-12-27-the-obstacles-to-put-istio-into-production/ingress-comparation.png","index":1,"caption_template":"图片 - _CAPTION_","label":"Kubernetes ingress, Istio gateway and API gateway的功能对比","attributes":{},"skip":false,"key":"1.4.8.1"},{"backlink":"content/ingress/mesh-gateway-solution.html#fig1.4.9.1","level":"1.4.9","list_caption":"Figure: 采用API Gateway + Sidecar Proxy为服务网格提供流量入口","alt":"采用API Gateway + Sidecar Proxy为服务网格提供流量入口","nro":13,"url":"https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/API-Gateway-and-Sidecar-Proxy-as-Ingress-for-Istio.png","index":1,"caption_template":"图片 - _CAPTION_","label":"采用API Gateway + Sidecar Proxy为服务网格提供流量入口","attributes":{},"skip":false,"key":"1.4.9.1"}]},"title":"Istio深度解析与项目实践","language":"zh-hans","links":{"sidebar":{"zhaohuabing.com":"https://zhaohuabing.com"}},"gitbook":">=3.2.0","description":"Istio深度解析与项目实践","extension":null},"file":{"path":"content/traffic-management/bookinfo.md","mtime":"2020-05-26T01:08:50.445Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T01:21:02.455Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1906,11 +1857,7 @@ Productpage Pod&#x4E2D;&#x7684;Envoy&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;Outb
         
     
         
-        <script src="../../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
