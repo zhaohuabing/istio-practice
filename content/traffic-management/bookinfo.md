@@ -306,7 +306,7 @@ kubectl exec productpage-v1-54b8b9f55-bx2dq -c istio-proxy -- cat /etc/istio/pro
         }
       ]
     }
-  }```
+  }
 ```
 
 ##### Static_resources
@@ -398,6 +398,7 @@ kubectl exec productpage-v1-54b8b9f55-bx2dq -c istio-proxy -- cat /etc/istio/pro
     }
   ]
 ```
+
 在Gist https://gist.github.com/zhaohuabing/14191bdcf72e37bf700129561c3b41ae中可以查看该配置文件的完整内容。
 
 ## Envoy配置分析

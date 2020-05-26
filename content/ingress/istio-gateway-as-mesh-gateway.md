@@ -8,4 +8,4 @@ Gateway和VirtualService用于表示Istio Ingress的配置模型，Istio Ingress
 
 通过该方式，Istio控制面用一致的配置模型同时控制了入口网关和内部的sidecar代理。这些配置包括路由规则，策略检查、Telementry收集以及其他服务管控功能。
 
-![采用 Istio Ingress Gateway作为服务网格的流量入口](https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Istio-Ingress.png)
+![采用 Istio Ingress Gateway作为服务网格的流量入口](https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/Istio-Ingress.jpg)

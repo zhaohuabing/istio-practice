@@ -9,4 +9,4 @@
 * K8s Ingress是独立在Istio体系之外的，需要单独采用Ingress rule进行配置，导致系统入口和内部存在两套互相独立的路由规则配置，运维和管理较为复杂。
 * K8s Ingress rule的功能较弱，不能在入口处实现和网格内部类似的路由规则，也不具备网格sidecar的其它能力，导致难以从整体上为应用系统实现灰度发布、分布式跟踪等服务管控功能。
 
-![采用Kubernetes Ingress作为服务网格的流量入口](https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/K8s-ingress-and-Istio.png)
+![采用Kubernetes Ingress作为服务网格的流量入口](https://zhaohuabing.com/img/2019-03-29-how-to-choose-ingress-for-service-mesh/K8s-ingress-and-Istio.jpg)
